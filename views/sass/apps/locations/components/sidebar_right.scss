@@ -1,0 +1,47 @@
+.sidebar-right {
+    margin: 15px;
+    .header {
+        display: flex;
+        i {
+            font-size: 22px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            &:hover {
+                cursor: pointer;
+                color: #6c95f5;
+            }
+        }
+    }
+}
+
+.container-filters {
+    .content {
+        .container-filter-dictionaries {
+            display: flex;
+            .btn-load-dictionaries {
+                position: absolute;
+                right: 10px;
+                color: #2d75e0;
+                cursor: pointer;
+            }
+        }
+        .container-filter-saved-filters {
+            display: flex;
+            .btn-load-filters{
+                position: absolute;
+                right: 10px;
+                color: #2d75e0;
+                cursor: pointer;
+            }
+        }
+        .container-threats {
+            #icon-threats-anger  {
+                color: crimson;
+            }
+            #icon-threats-love {
+                color: darkorchid;
+            }
+        }
+    }
+}

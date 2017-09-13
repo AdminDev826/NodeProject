@@ -1,0 +1,7 @@
+.page-content .panel-title > *
+{
+    line-height: 50px;
+
+    margin: 0;
+    padding: 0 30px;
+}

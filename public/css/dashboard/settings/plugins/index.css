@@ -1,0 +1,8 @@
+.plugin-item:hover {
+  cursor: pointer;
+  background: aliceblue;
+}
+
+.table a {
+  text-decoration: blink;
+}

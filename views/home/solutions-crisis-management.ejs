@@ -1,0 +1,110 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Crisis Management Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Crisis Management Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/solutions-crisis-management.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Be prepared for anything</h1>
+          <p class="section-desc white"><%= appdata.product %> combines an intuitive
+            crisis mapping interface with real time analytics to help respond
+            to incidents and mitigate their impact.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center bg-grey-300">
+      <div class="container container-fluid">
+
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">Why <%= appdata.product %>?</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Crisis response is a chaotic, high-stakes affair, with every
+            second potentially having a logistics nightmare or loss, these catastrophes leave your assets highly vulnerable.
+          </p>
+          <p class="section-desc text-left">
+            With <%= appdata.product %>, crisis management teams can instantly get the most detailed, up to date information major impact on the
+            ultimate outcome. Whether it’s a about a situation or its origins, <%= appdata.product %> provides the insight
+            for faster, more comprehensive decision-making.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-grey-100">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">How it works</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Hackers and other malicious actors plan and operate through digital
+            channels. With <%= appdata.product %>’s advanced monitoring tools, these conversations and pieces of code can be identified and
+            tracked across multiple channels to provide proactive cybersecurity support.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-orange-50">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Realtime updates</h4>
+              <p class="grey-900">Track a situation in real time to get the most up to date information and deploy more efficient response teams.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Visualization tools</h4>
+              <p class="grey-900">Construct maps of the crisis’s origins, pinpoint key eye witnesses, and project ongoing developments with detailed local data.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Advanced Analytics</h4>
+              <p class="grey-900">Construct impact reports with localized data both live and after the fact to channel resources to where they are needed most.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <% include ../home/components/request_demo %>
+    <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

@@ -1,0 +1,33 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+        <link rel="stylesheet" href="/css/dashboard/settings/widgets/index.css">
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row m-b-20">
+                                <a class="btn btn-success btn-block btn-audit" href="/dashboard/settings/widgets/audit">Audit</a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page-->
+    <% include ../../../html/body_end %>
+
+    <script src = "/js/dashboard/settings/widgets/index.js"></script>
+    
+<% include ../../../html/html_end %>

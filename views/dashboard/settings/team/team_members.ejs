@@ -1,0 +1,156 @@
+<div class="tab-pane active" id="tab_team_members" role="tabpanel">
+    <div class = "panel">
+        <div class = "panel-body container-fluid">
+            <div class = "col-xs-12 col-lg-8">
+                <ul class="list-group" id = "team_member_list">  
+
+                    <% 
+                        activeCount         = 0;
+                        pendingCount        = 0;
+                        deactivatedCount    = 0; 
+                    %>
+
+                    <% for (var i = 0; i < members.length; i++) { %>
+                    <% 
+                        userTypeArray           = ["Owner", "Admin", "Member"];
+                        statusArray             = ["Active", "Pending", "Deactivated"];
+                        labelUserTypeStyle      = ["label-primary", "label-success", "label-warning"];
+                        labelStatusStyle        = ["label-primary", "label-info", "label-danger"];
+
+                        if (members[i].status == 0) {
+                            activeCount ++;
+                        } else if (members[i].status == 1) {
+                            pendingCount ++;
+                        } else if (members[i].status == 2) {
+                            deactivatedCount ++;
+                        }
+                    %>
+
+                    <li class="member-profile-item" data-id="<%= members[i]._id %>">
+                        <div class="member-profile-container">
+                            <div class="pull-xs-left member-profile-avatar">
+                                <a class="avatar"><img class="img-fluid" src="/assets/examples/images/grunt.png" alt=""></a>
+                            </div>
+                            <div class="member-profile-content">
+                                <h5 class="media-heading"><%= members[i].fullname %></h5>
+                                <h5 class="media-heading"><%= members[i].email %></h5>
+                                <% if (userType == 0) { %>
+
+                                    <span class="label <%= labelUserTypeStyle[members[i].user_type] %> member-profile-position" id="<%= members[i]._id %>" 
+                                        data-type="select" data-pk="1" data-value="<%= members[i].user_type %>"
+                                        data-title="select user type"></span>
+                                    <span class="label <%= labelStatusStyle[members[i].status] %>"><%= statusArray[members[i].status] %></span>
+                                    <% if (!(members[i].user_type == 0) && !(userID == members[i]._id)) { %>
+                                        <% if (members[i].status == 0) { %>
+                                            <div class="member-profile-btn-deactivate">
+                                                <span class="label label-danger">Deactivate</span>
+                                            </div>
+                                        <% } else if(members[i].status == 2) { %>
+                                            <div class="member-profile-btn-activate">
+                                                <span class="label label-primary">Activate</span>
+                                            </div>
+                                        <% } %>
+                                        <div class="member-profile-btn-delete">
+                                            <span class="label label-primary">Delete</span>
+                                        </div>
+                                    <% } %>
+                                    
+                                <% } else if (userType == 1) { %>
+                                    <span class="label <%= labelUserTypeStyle[members[i].user_type] %> member-profile-position" id="<%= members[i]._id %>" 
+                                        data-type="select" data-pk="1" data-value="<%= members[i].user_type %>"
+                                        data-title="select user type"></span>
+                                    <span class="label <%= labelStatusStyle[members[i].status] %>"><%= statusArray[members[i].status] %></span>
+                                    <% if (!(members[i].user_type == 0) && !(userID == members[i]._id) ) { %>
+                                        <% if (members[i].status == 0) { %>
+                                            <div class="member-profile-btn-deactivate">
+                                                <span class="label label-danger">Deactivate</span>
+                                            </div>
+                                        <% } else if(members[i].status == 2) { %>
+                                            <div class="member-profile-btn-activate">
+                                                <span class="label label-primary">Activate</span> 
+                                            </div>
+                                        <% } %>
+                                        <div class="member-profile-btn-delete">
+                                            <span class="label label-primary">Delete</span>
+                                        </div>
+                                    <% } %>
+
+                                <% } else { %>
+                                    <span class="label <%= labelUserTypeStyle[members[i].user_type] %>"><%= userTypeArray[members[i].user_type] %></span>
+                                    <span class="label <%= labelStatusStyle[members[i].status] %>"><%= statusArray[members[i].status] %></span>
+                                <% } %>
+
+                            </div>
+                        </div>
+                    </li>
+
+                    <% } %>
+
+                </ul>
+            </div>
+            <div class = "col-xs-12 col-lg-2">
+                <% if (userType == 0 || userType == 1) { %>
+                    <div class="row">
+                        <button type="button" class="btn btn-primary waves-effect m-b-20" data-target = "#inviteMemberFormModal" data-toggle="modal">
+                        <i class="icon icon md-plus"></i>Invite New Member
+                        </button>
+                    </div>
+                <% } %>
+                <div class="row">
+                    <span class="label label-outline label-primary">Active - <%= activeCount %></span>
+                </div>
+                <div class="row">
+                    <span class="label label-outline label-info">Pending - <%= pendingCount %></span>
+                </div>
+                <div class="row">
+                    <span class="label label-outline label-danger">Deactivated - <%= deactivatedCount %></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Invite-Member-Modal -->
+<div class="modal fade modal-success" id="inviteMemberFormModal" aria-hidden="false" aria-labelledby="inviteMemberFormModalLabel"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <form class="modal-content" action = "/dashboard/settings/team/inviteMember" method="POST" id="team_member_inviteForm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="inviteMemberFormModalLabel">Invite New Member</h4>
+            </div>
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="text" class="form-control" name="firstName" id="team_member_inviteForm_firstName" placeholder="First Name" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="text" class="form-control" name="lastName" id="team_member_inviteForm_lastName" placeholder="Last Name" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="email" class="form-control" name="email" id="team_member_inviteForm_email" placeholder="Email" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                        <select class="form-control" data-plugin="select" id="team_member_inviteForm_userType" name="userType">   
+                            <option value = "2">Member</option>
+                            <option value = "1">Admin</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Invite</button>
+                <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!----------------------->

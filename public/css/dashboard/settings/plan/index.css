@@ -1,0 +1,31 @@
+.current-plan {
+  top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: white;
+}
+
+.current-plan-currency,
+.current-plan-amount {
+  font-size: 24px;
+}
+
+.current-plan-period {
+  font-size: 20px;
+}
+
+.current-plan-pricing {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  margin: 0px;
+}
+
+.current-plan-pricing-title {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 500;
+  margin: 0px;
+  font-size: 30px;
+}

@@ -1,0 +1,111 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Event Security Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Event Security Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/solutions-event-support.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Proactive Event Security</h1>
+          <p class="section-desc white"><%= appdata.product %> monitors and engages digital channels
+            to help you run your event smoother and prevent disruptions.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center bg-grey-300">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">Why <%= appdata.product %>?</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Large scale events are an essential opportunity to grow a brand, but they also
+            open up countless vulnerabilities to infiltration, attack, and brand sabotage.
+          </p>
+          <p class="section-desc text-left">
+            Where other security platforms focus only on keywords, <%= appdata.product %> does more than that. <%= appdata.product %> gives you the
+            tools to actively monitor event performance by leveraging location based monitoring and TrueId.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-grey-100">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">How it works</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Event disruptions and brand attacks are often planned and executed through
+            social media and blogging websites. Afred can monitor these channels to warn you of potential disruptions,
+            then support you in boosting positive press to your event to ensure that the event positively impacts your brand.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center section-primary">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title">Advance warning</h4>
+              <p>Detect protests and other disruptions in advance and monitor their presence
+                within your security perimeter with location based monitoring and mapping tools.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title">Logistics management</h4>
+              <p>Listen for on-site issues such as logistics errors or wifi failures to
+                respond to discontent attendees and maximize the event’s success.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title">Proactive communication</h4>
+              <p>Identify the event’s top influencers and even entice more to attend
+                with <%= appdata.product %>’s social media analysis and engagement platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <% include ../home/components/request_demo %>
+    <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

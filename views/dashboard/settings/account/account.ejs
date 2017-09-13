@@ -1,0 +1,189 @@
+<div class="tab-pane active" id="tab_account" role="tabpanel">
+    <div class = "panel">
+        <div class = "panel-body container-fluid">
+            <div class = "col-xs-12 col-lg-12">
+                <!-- Profile Image-->
+                <div class = "row">
+
+                  <div class = "col-xs-12 col-md-8">
+                      <div class="inline-row">
+                          <h4 class = "user-name"></h4>
+                          <a class="text-action" data-target = "#nameFormModal" data-toggle="modal"><i class = "icon md-edit"></i></a>
+                      </div>
+                      <div class = "m-t-40">Email</div>
+                      <div class = "inline-row">
+                        <h5 class = "user-email"></h5>
+                        <a class="text-action" data-target = "#emailFormModal" data-toggle="modal"><i class = "icon md-edit"></i></a>
+                      </div>
+                      <!--
+                      <div class = "inline-row">
+                          <p class = "user-tag"></p>
+                          <a class="text-action" data-target = "#tagFormModal" data-toggle="modal"><i class = "icon md-edit"></i></a>
+                      </div>
+                      -->
+                  </div>
+
+                    <div class="col-xs-12 col-md-4">
+                        <a class = "avatar img-bordered avatar-100" href = "javascript:void(0)">
+                            <img src="/assets/examples/images/grunt.png" alt="">
+                        </a>
+                    </div>
+
+
+
+                </div>
+                <!------------------>
+                <!-- UserName, Tag, Email -->
+                <div class = "row m-t-20">
+
+
+                </div>
+                <!------------------>
+                <!-- Lanaguage, Date Format, Timezone -->
+                <div class = "row  m-t-20">
+                    <!-- Lanugage -->
+                    <div class="col-xs-12 col-lg-4">
+                        <p class = "user-language-label">
+                            Language
+                        </p>
+                        <select class="form-control" data-plugin="select" id = "select_language">
+                            <option value='en'>English</option>
+                            <option value='es'>Spanish</option>
+                        </select>
+                    </div>
+                    <!-------------->
+                    <div class="col-xs-12 col-lg-6">
+                        <!-- Date Format -->
+                        <p class = "user-dateformat-label">
+                            Date Format
+                        </p>
+                        <select class="form-control" data-plugin="select" id="select_dateformat">
+                            <option> Select DateFormat </option>
+                            <option value = "MM/DD/YYYY">MM/DD/YYYY (08/17/2017)</option>
+                            <option value = "DD/MM/YYYY">DD/MM/YYYY (18/08/2017)</option>
+                            <option value = "YYYY-MM-DD">YYYY-MM-DD (2017-08-17)</option>
+                        </select>
+                        <!-------------->
+                      </div>
+                      <!-------------->
+                      <div class="col-xs-12 col-lg-10">
+
+                        <!-- TimeZone -->
+                        <p class = "user-timezone-label m-t-20">
+                            Timezone
+                        </p>
+                        <select class="form-control" data-plugin="select" id="select_timezone">
+
+                        </select>
+                        <!-------------->
+                    </div>
+                </div>
+                <!------------------>
+                <!-- Deactivate Acccount -->
+                <!--
+                <div class = "row m-t-50">
+                    <div class = "col-xs-12 col-lg-12">
+                        <h4 class = "user-deactivate-account-title">
+                            Deactivate account
+                        </h4>
+                        <h5 class = "user-deactivate-account-description">
+                            If you no longer need your account, you can deactivate your account.
+                        </h5>
+
+                        <div class = "row text-xs-center">
+                            <button type="button" class="btn btn-danger waves-effect" id="btn_deactivate">Deactivate Account</button>
+                        </div>
+                    </div>
+                </div>
+                -->
+                <!------------------------->
+            </div>
+        </div>
+    </div>
+</div>
+<!------------->
+
+<!-- Account-Name-Modal -->
+<div class="modal fade modal-success" id="nameFormModal" aria-hidden="false" aria-labelledby="nameFormModalLabel"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <form class="modal-content" action = "/dashboard/settings/account/changeName" method="POST" id="nameForm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="nameFormModalLabel">Change Your Name</h4>
+            </div>
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="text" class="form-control" name="firstName" id="firstName" placeholder="First Name" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="text" class="form-control" name="lastName" id="lastName" placeholder="Last Name" required="true">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Change Name</button>
+                <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!----------------------->
+
+<!-- Account-Tag-Modal -->
+<div class="modal fade modal-success" id="tagFormModal" aria-hidden="false" aria-labelledby="tagFormModalLabel"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <form class="modal-content" action = "/dashboard/settings/account/changeTag" method="POST" id="tagForm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="tagFormModalLabel">Change Your Tag</h4>
+            </div>
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="text" class="form-control" name="tag" id="tag" placeholder="Your Tag" required="true">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Change Tag</button>
+                <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!----------------------->
+<!-- Account-Eamil-Modal -->
+<div class="modal fade modal-success" id="emailFormModal" aria-hidden="false" aria-labelledby="emailFormModalLabel"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <form class="modal-content" action = "/dashboard/settings/account/changeTag" method="POST" id="emailForm">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="emailFormModalLabel">Change Your Email</h4>
+            </div>
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required="true">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Change Email</button>
+                <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+<!----------------------->

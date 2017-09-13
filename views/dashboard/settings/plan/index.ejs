@@ -1,0 +1,265 @@
+<div class = "panel" id = "container_plan">
+    <div class = "panel-body container-fluid">
+
+        <div class="row">
+
+          <div class="col-xs-12">
+
+            <% if (locals.planChanged.success == 0) { %>
+                <div class="alert alert-danger" style="display: block;">
+                    <p><%= locals.planChanged.message %></p>
+                </div>
+            <% } else if (locals.planChanged.success == 1) { %>
+                <div class="alert alert-success"" style="display: block;">
+                    <p><%= locals.planChanged.message %></p>
+                </div>
+            <% } %>
+
+            <h4 class="">Plan details</h4><hr />
+          </div>
+
+        <div class="col-xs-12">
+          <div class="row bg-orange-600 ">
+            <div class="col-xs-12 col-md-6 pricing-header text-center">
+              <span class="current-plan-amount white"><strong>Plan</strong></span>
+            </div>
+            <div class="col-xs-12 col-md-6 pricing-header bg-orange-600 text-center">
+              <span class="current-plan-amount white"><strong>Usage</strong></span>
+            </div>
+          </div>
+
+          <div class="row  bg-grey-200">
+            <div class="col-xs-12 col-md-6 current-plan-pricing text-center">
+              <span class="current-plan-amount"><%= currentPlan['name'] %></span>
+            </div>
+            <div class="col-xs-12 col-md-6">
+              <% if (currentPlan['cost_monthly'] == 0) { %>
+                  <div class="current-plan-pricing text-center">
+                      <span class="current-plan-amount">Free</span>
+                  </div>
+              <% } else { %>
+                  <div class="current-plan-pricing text-center">
+                      <span class="current-plan-currency">$</span>
+                      <span class="current-plan-amount"><%= Number(currentPlan['cost_monthly']) %></span>
+                      <span class="current-plan-period">/mo</span>
+                  </div>
+                  <div class="current-plan-pricing text-center">
+                      <span class="current-plan-currency">$</span>
+                      <span class="current-plan-amount"><%= Number(currentPlan['cost_yearly']) %></span>
+                      <span class="current-plan-period">/yr</span>
+
+                      <span class="m-l-20">(<%= Number(currentPlan['discount']) %>% discount)</span>
+                  </div>
+              <% } %>
+            </div>
+          </div>
+
+
+          <div class="row row bg-grey-100">
+            <div class="col-xs-12 col-md-6 p-t-15 p-l-20">
+              <span class=""><strong><%= currentPlan['max_users'] %></strong> Users</span>
+            </div>
+            <div class="col-xs-12 col-md-6 p-t-15">
+              <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_users'] %>" data-goal="100"
+              data-plugin="progress">
+                  <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                  aria-valuenow="<%= account.users.length * 100 / currentPlan['max_users'] %>" role="progressbar">
+                      <span class="progress-label"></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row bg-grey-200">
+            <div class="col-xs-12 col-md-6 p-t-15 p-l-20">
+              <span class=""><strong><%= currentPlan['max_posts'] %></strong> Posts</span>
+            </div>
+            <div class="col-xs-12 col-md-6 p-t-15">
+              <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_posts'] %>" data-goal="100"
+              data-plugin="progress">
+                  <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                  aria-valuenow="<%= 0 %>" role="progressbar">
+                      <span class="progress-label"></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row bg-grey-100">
+            <div class="col-xs-12 col-md-6 p-t-15 p-l-20">
+              <span class=""><strong><%= currentPlan['max_storage'] %></strong> Posts</span>
+            </div>
+            <div class="col-xs-12 col-md-6 p-t-15">
+              <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_storage'] %>" data-goal="100"
+              data-plugin="progress">
+                  <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                  aria-valuenow="<%= 0 %>" role="progressbar">
+                      <span class="progress-label"></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row bg-grey-200">
+            <div class="col-xs-12 col-md-6 p-t-15 p-l-20">
+              <span class=""><strong><%= currentPlan['max_monitors'] %></strong> Monitor</span>
+            </div>
+            <div class="col-xs-12 col-md-6 p-t-15">
+              <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_monitors'] %>" data-goal="100"
+              data-plugin="progress">
+                  <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                  aria-valuenow="<%= 0 %>" role="progressbar">
+                      <span class="progress-label"></span>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row bg-grey-100">
+            <div class="col-xs-12 col-md-6 p-t-15 p-l-20">
+              <span class=""><strong><%= currentPlan['max_live_searches'] %></strong> Live searches</span>
+            </div>
+            <div class="col-xs-12 col-md-6 p-t-15">
+              <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_live_searches'] %>" data-goal="100"
+              data-plugin="progress">
+                  <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                  aria-valuenow="<%= 0 %>" role="progressbar">
+                      <span class="progress-label"></span>
+                  </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-xs-12">
+              <div class="pricing-list text-xs-left">
+                  <% if (role != 2) { %>
+                  <div class="pricing-footer text-xs-center bg-grey-300">
+                      <% if (billing == null) { %>
+                          <a class="btn btn-primary btn-lg disabled">
+                              <i class="icon md-long-arrow-right font-size-16 m-r-15"></i>Change Plan
+                          </a>
+                      <% } else { %>
+                          <a class="btn btn-primary btn-lg" data-target = "#upgradePlanModal" data-toggle="modal">
+                              <i class="icon md-long-arrow-right font-size-16 m-r-15"></i>Change Plan
+                          </a>
+                      <% } %>
+                  </div>
+                  <% } %>
+              </div>
+          </div>
+        </div>
+
+            <!--
+            <h6 class="font-size-16">Live Searches Per User</h6>
+            <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_live_searches_per_user'] %>" data-goal="100"
+            data-plugin="progress">
+                <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                aria-valuenow="<%= 0 %>" role="progressbar">
+                    <span class="progress-label"></span>
+                </div>
+            </div>
+
+            <h6 class="font-size-16">Monitors Per User</h6>
+            <div class="progress" data-labeltype="steps" data-totalsteps="<%= currentPlan['max_monitors_per_user'] %>" data-goal="100"
+            data-plugin="progress">
+                <div class="progress-bar" aria-valuemin="0" aria-valuemax="100" style="width: 50%"
+                aria-valuenow="<%= 0 %>" role="progressbar">
+                    <span class="progress-label"></span>
+                </div>
+            </div>
+          -->
+
+        </div>
+
+        <% if (role != 2) { %>
+            <div class="row m-t-50">
+                <h4 class="">Billing details</h4><hr />
+                <% if (billing == null) { %>
+                    <div class="col-xs-12 col-md-12 text-center">
+                        <div class="alert alert-warning">
+                        <h5> You need to setup payment to upgrade your plan.</h5>
+                        </div>
+                        <a class="btn btn-success btn-sm" href="/dashboard/settings/plan/billing"> Setup Payment </a>
+                    </div>
+                    <div class="col-xs-12 col-md-4 v-center">
+
+                    </div>
+                <% } else { %>
+                    <div class="col-xs-12 col-md-4">
+                        <h5 class="m-t-20"> Company name </h5>
+                        <h5 class="m-t-20"> Payment method </h5>
+                        <h5 class="m-t-20"> Next billing date </h5>
+                        <h5 class="m-t-20"> Billing country </h5>
+                    </div>
+                    <div class="col-xs-12 col-md-4">
+                        <h5 class="m-t-20"> <%= billing["company_name"] %> </h5>
+                        <h5 class="m-t-20"> Visa ****<%= billing["card_number"].slice(-4) %> </h5>
+                        <h5 class="m-t-20 billing-end-date"> <%= account["plan_end_date"] == null? "...": account["plan_end_date"] %> </h5>
+                        <h5 class="m-t-20"> <%= billing["country"] %> </h5>
+                    </div>
+                <% } %>
+            </div>
+            <% if (billing != null) { %>
+            <div class="row m-t-20">
+                <div class="col-xs-12 col-md-12">
+                    <a class="btn btn-success btn-block m-r-40" href="/dashboard/settings/plan/billing"> Update </a>
+                </div>
+            </div>
+            <% } %>
+        <% } %>
+    </div>
+</div>
+
+<!-- Upgrade-Plan-Modal -->
+<div class="modal fade modal-success" id="upgradePlanModal" aria-hidden="false" aria-labelledby="upgradePlanModalLabel"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="upgradePlanModalLabel">Change Plan</h4>
+            </div>
+            <div class="modal-body">
+                <div class="pricing-table">
+                    <% for (var i = 0; i < allPlans.length; i++) { %>
+                        <form class="plan-form-item" action = "/dashboard/settings/plan/changePlan" method="GET">
+                            <% if (allPlans[i]['_id'] == currentPlan['id']) { %>
+                            <div class="pricing-column-five featured">
+                            <% } else {%>
+                            <div class="pricing-column-five">
+                            <% } %>
+                                <div class="pricing-header">
+                                    <div class="pricing-title"><%= allPlans[i]['name'] %></div>
+                                    <h4> $<%= Number(allPlans[i]['cost_monthly']) %> /mo </h4>
+                                    <h4> $<%= Number(allPlans[i]['cost_yearly']) %> /yr </h4>
+                                </div>
+                                <ul class="pricing-features">
+                                    <li><strong><%= allPlans[i]['max_users'] %></strong> Users</li>
+                                    <li><strong><%= allPlans[i]['max_posts'] %></strong> Posts</li>
+                                    <li><strong><%= allPlans[i]['max_storage'] %>MB</strong> Storage</li>
+                                    <li><strong><%= allPlans[i]['max_monitors'] %></strong> Monitor</li>
+                                    <li><strong><%= allPlans[i]['max_live_searches'] %></strong> Live searches</li>
+<!--                                    <li><strong><%= allPlans[i]['max_live_searches_per_user'] %></strong> Live searches per user</li>
+                                    <li><strong><%= allPlans[i]['max_monitors_per_user'] %></strong> Monitors per user</li>
+-->
+                                </ul>
+
+                                <input type="hidden" name="planID" value="<%= allPlans[i]['_id'] %>">
+                                <div class="pricing-footer">
+                                    <button type="submit" class="btn btn-primary plan_upgrade_plan">
+                                        <i class="icon md-long-arrow-right font-size-16 m-r-15"></i>Switch
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

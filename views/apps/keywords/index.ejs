@@ -1,0 +1,52 @@
+<% include ../../html/html_begin %>
+<% include ../../html/head_begin %>
+    <meta name="description" content="bootstrap admin template">
+    <title>Keywords</title>
+    <link rel = "stylesheet" href = "/css/apps/components/navbar.css">
+    <link rel = "stylesheet" href = "/css/apps/keywords/index.css">
+<% include ../../html/head_end %>
+
+<% include ../../html/body_begin %>
+    <% include ../components/navbar %>
+    <% include ../components/site-menubar %>
+    <!-- Page -->
+    <div class="page">
+        <div class="page-content container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-xl-8 col-md-8">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-xs-12 col-xl-8 col-md-8 text-center">
+                                    <label class="label-search">Search social media for Keywords</label>
+                                </div>
+                                <div class="col-xs-12 col-xl-8 col-md-8 m-t-20 text-center">
+                                    <div class="input-group">
+                                        <form action="/apps/keywords" method="GET">
+                                            <div class="input-group">
+                                                <input type="text" class="form-control" name="keywords" placeholder="Search locations" required>
+                                                <span class="input-group-btn">
+                                                    <button type="submit" class="btn btn-primary">
+                                                        <i class="icon md-search"></i>
+                                                    </button>
+                                                </span>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12 col-xl-8 col-md-8 m-t-50 text-center">
+                                    <label class="label-comment">Use the comma ( , ) to seperate each key term</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page -->
+<% include ../../html/body_end %>
+
+<script src="/js/apps/keywords/index.js"></script>
+
+<% include ../../html/html_end %>

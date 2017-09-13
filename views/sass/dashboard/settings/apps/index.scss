@@ -1,0 +1,10 @@
+.app-item {
+    &:hover {
+        cursor: pointer;
+        background: rgba(240, 248, 255, 1.0)
+    }
+}
+
+.table a {
+    text-decoration: blink;
+}

@@ -1,0 +1,132 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <form action="/dashboard/settings/plan/billing" method="POST" id="plan_billing_detail_form">
+
+                                <div class="row">
+
+                                    <h4> Contact </h4><hr/>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">First Name</label>
+                                                <input type="text" class="form-control" name="firstName" placeholder="FirstName" id="plan_billing_firstName" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Last Name</label>
+                                                <input type="text" class="form-control" name="lastName" placeholder="LastName" id="plan_billing_lastName" required>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">Company Name</label>
+                                        <input type="text" class="form-control" name="companyName" placeholder="Company Name" id="plan_billing_companyName" required>
+                                    </div>
+
+                                    <h4 class="m-t-40"> Address </h4><hr/>
+                                    <div class="form-group">
+                                        <label class="control-label">Country</label>
+                                        <select class="form-control" data-plugin="select" name="country" id="plan_billing_country" required>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="control-label">Address</label>
+                                        <input type="text" class="form-control" name="address" placeholder="Address" id="plan_billing_address" required>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">City</label>
+                                                <input type="text" class="form-control" name="city" placeholder="City" id="plan_billing_city" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Postal Code</label>
+                                                <input type="text" class="form-control" name="postalCode" id="plan_billing_postalCode" placeholder="Postal Code">
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="m-t-20"> Billing Frequency </h4><hr/>
+                                    <div class="form-group">
+                                        <div class="radio-custom radio-default">
+                                            <input type="radio" id="payment_billing_monthly" name="billingType"  value="0" checked />
+                                            <label for="payment_billing_monthly">Pay Monthly ($X per month)</label>
+                                        </div>
+                                        <div class="radio-custom radio-default">
+                                            <input type="radio" id="payment_billing_annually" name="billingType" value="1" />
+                                            <label for="payment_billing_annually">Pay Annually ($Y ($X discount))</label>
+                                        </div>
+                                    </div>
+
+                                    <h4 class="m-t-30"> Payment </h4><hr/>
+                                    <div class="form-group">
+                                        <label class="control-label">Card Number</label>
+                                        <input type="text" class="form-control" name="cardNumber" placeholder="Card Number" required>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Card Expiration Month</label>
+                                                <select class="form-control" data-plugin="select" name="cardExpirationMonth" id="plan_billing_month" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-md-6">
+                                            <div class="form-group">
+                                                <label class="control-label">Card Expiration Year</label>
+                                                <select class="form-control" data-plugin="select" name="cardExpirationYear" id="plan_billing_year" required>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="control-label">CVV</label>
+                                        <input type="text" class="form-control" name="securityCode" placeholder="CVV" required>
+                                    </div>
+                                </div>
+
+                                <div class="row m-t-20">
+                                    <button type="submit" class="btn btn-success btn-block m-r-40"> Update Billing Details </button>
+                                </div>
+
+                                <div class="row m-t-20">
+                                    <a href="/dashboard/settings/plan" class="btn btn-block"> Cancel </a>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page -->
+    <% include ../../../html/body_end %>
+
+    <script src = "/js/dashboard/settings/plan/billing.js"></script>
+
+<% include ../../../html/html_end %>

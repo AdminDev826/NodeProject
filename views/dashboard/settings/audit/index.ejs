@@ -1,0 +1,57 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+        <link rel="stylesheet" href="/lib/pdf/all.min.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/audit/index.css">
+
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div id="table_container">
+                                <button id="exportButton" class="btn btn-success m-r-20 pull-right clearfix m-b-20"><span class="fa fa-file-pdf-o"></span> Export to PDF</button>
+                                <table class="table w-full m-b-0">
+                                    <tr>
+                                        <td class="w-120 vcenter"><input type="text" class="form-control" placeholder="Search Actor" id="audit_actor" /></td>
+                                        <td class="w-150 vcenter">
+                                            <div style="width:100%;display:flex;">
+                                                <input type="text" class="form-control" placeholder="From" id="audit_time_from" />
+                                                <input type="text" class="form-control" placeholder="To" id="audit_time_to" />
+                                            </div>
+                                        </td>
+                                        <td class="w-120 vcenter"><input type="text" class="form-control" placeholder="Search Event" id="audit_event" /></td>
+                                        <td class="w-200 vcenter"><input type="text" class="form-control" placeholder="Search Description" id="audit_description" /></td>
+                                    </tr>
+                                </table>
+                                <table class="table table-hover dataTable table-striped w-full" id="audit_table">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-120">Actor</th> 
+                                            <th class="w-150">Time</th>
+                                            <th class="w-120">Event</th>
+                                            <th class="w-200">Description</th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page-->
+    <% include ../../../html/body_end %>
+
+    <script src = "/js/dashboard/settings/audit/index.js"></script>
+    
+<% include ../../../html/html_end %>

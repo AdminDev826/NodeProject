@@ -1,0 +1,192 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+        <link rel="stylesheet" href="/assets/vendor/jquery-ui/jquery-ui.css">
+        <link rel="stylesheet" href="/assets/vendor/jquery-ui/jquery-ui.theme.css">
+        <link rel="stylesheet" href="/assets/vendor/jquery-ui/jquery-ui.structure.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/apps/edit.css">
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <form action="/dashboard/settings/apps/edit" method="POST" id="createForm">
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12 form-group">
+                                        <label  class="control-label" for="name">App name</label>
+                                        <input type="text" class="form-control" name="name" id="name">
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12 form-group">
+                                        <label class="control-label" for="app_url">App URL</label>
+                                        <input type="text" class="form-control" name="app_url" id="app_url" />
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12 form-group">
+                                        <label  class="control-label" for="access">Access</label>
+                                        <select class="form-control" data-plugin="select" name="access" id="access">
+                                            <option value="0">System</option>
+                                            <option value="1">Public</option>
+                                            <option value="2">Private</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12">
+                                        <label  class="control-label m-b-10" for="images">Screenshot</label>
+                                        <div class="row image-container">
+                                            <div class="col-xs-4 col-md-3 image-item empty">
+                                                <div class="card card-block">
+                                                    Click to add image
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-4 form-group">
+                                        <label  class="control-label" for="license_type">License Type</label>
+                                        <select class="form-control" data-plugin="select" name="license_type" id="license_type">
+                                            <option value="1">Free</option>
+                                            <option value="2">Paid</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 form-group">
+                                        <label  class="control-label" for="license_method">License Method</label>
+                                        <select class="form-control" data-plugin="select" name="license_method" id="license_method">
+                                            <option value="0"></option>
+                                            <option value="1">Cost/Month</option>
+                                            <option value="2">Cost/Year</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xs-12 col-md-4 form-group">
+                                        <label class="control-label" for="license_cost">License Cost</label>
+                                        <input type="text" class="form-control" name="license_cost" id="license_cost" required>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12 form-group">
+                                        <label  class="control-label" for="description">Description</label>
+                                        <textarea class="form-control" name="description" rows="3" id="description"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12 form-group">
+                                        <label class="control-label" for="tags">Tags</label>
+                                        <input type="text" class="form-control" data-plugin="tokenfield" data-limit="3" name="tags" id="tags" />
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12">
+                                        <label class="control-label" for="properties">Properties</label>
+                                        <div class="properties" id="properties">
+                                            <table class="wrapper properties-table" width="100%">
+                                                <thead>
+                                                    <tr>
+                                                        <td width="10%" colspan="3"><button type="button" class="btn btn-success add">Add</button></td>
+                                                    </tr>
+                                                </thead>
+                                                <tbody class="container">
+                                                    <tr class="template row property-row">
+                                                        <td width="85%">
+                                                            <dl>
+                                                                <dt>
+                                                                    <label class="control-label">Name</label>
+                                                                </dt>
+                                                                <dd>
+                                                                    <input type="text" class="form-control property-name" name="property-name[{{row-count-placeholder}}]" />
+                                                                </dd>
+                                                                <dt>
+                                                                    <label class="control-label">Value</label>
+                                                                </dt>
+                                                                <dd>
+                                                                    <input type="text" class="form-control property-value" name="property-value[{{row-count-placeholder}}]" />
+                                                                </dd>
+                                                            </dl>
+                                                            
+                                                        </td>
+                                                        <td width="15%" class="text-center">
+                                                            <button type="button" class="btn btn-danger remove">Remove</button>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row m-t-20">
+                                    <div class="col-xs-12 col-md-12">
+                                        <button type="button" class="btn btn-success btn-block btn-submit">Update</button>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <!-- Image-Modal -->
+                            <div class="modal fade modal-success" id="imageModal" aria-hidden="false" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-lg modal-center">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span>×</span>
+                                            </button>
+                                            <h4 class="modal-title">Add image</h4>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="row">
+                                                <div class="col-xs-12 col-xl-12 m-b-10">
+                                                    <div class="alert alert-danger" id="message">
+                                                    </div>
+                                                </div>
+                                                <div class="col-xs-12 col-xl-12 m-b-10">
+                                                    <label  class="control-label" for="image_tag">Tag</label>
+                                                    <input type="text" class="form-control" id="image_tag"/>
+                                                </div>
+                                                <div class="col-xs-12 col-xl-12 m-b-10">
+                                                    <input type="radio" class="icheckbox-primary" value="choose_from_local" id="choose_from_local"
+                                                        data-plugin="iCheck" data-radio-class="iradio_flat-blue" name="choose"/>
+                                                    <label class="m-r-40" for="choose_from_local">File</label>
+                                                    <input type="radio" class="icheckbox-primary" value="choose_from_remote" id="choose_from_remote"
+                                                        data-plugin="iCheck" data-radio-class="iradio_flat-blue" name="choose"/>
+                                                    <label class="m-r-40" for="choose_from_remote_url">Remote URL</label>                                                    
+                                                </div>
+                                                <div class="col-xs-12 col-xl-12 m-b-10" id="container_local">
+                                                    <input type="file" data-plugin="dropify" data-default-file="" id="image_drag_drop"/>
+                                                </div>
+                                                <div class="col-xs-12 col-xl-12 m-b-10" id="container_remote">
+                                                    <label  class="control-label" for="image_url">URL</label>
+	                                                <input type="text" class="form-control" id="image_url"/>
+                                                    <img class="preview" src="" alt="Preview" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer text-center">
+                                            <button type="button" class="btn btn-primary waves-effect btn-add">Add</button>
+                                            <button type="button" class="btn btn-default btn-pure waves-effect btn-cancel" data-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!----------------------->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page-->
+    <% include ../../../html/body_end %>
+    
+    <script src="/assets/vendor/jquery-ui/jquery-ui.js"></script>
+    <script src = "/js/dashboard/settings/apps/edit.js"></script>
+    
+<% include ../../../html/html_end %>

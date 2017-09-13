@@ -1,0 +1,178 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Financial Services Security Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Financial Services Security Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/industry-financial-services.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Protect your data and your bottomline</h1>
+          <h3 class="white"><%= appdata.product %> for financial services</h3>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center">
+      <div class="container container-fluid">
+        <p class="section-desc text-left font-size-24">In the financial sector,
+          information security is one of the most important aspects of
+          running a successful business. From client confidence to loss
+          prevention, having secure data is a cornerstone of the industry.
+        </p>
+        <p class="section-desc text-left font-size-24"><%= appdata.product %> works with financial
+          services organizations to detect threats to their information
+          and infrastructure before they are executed, allowing you to
+          focus on your clients, not your data.
+
+        </p>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-blue-900">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile white"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title white">Defend corporate data</h4>
+              <p class="white">Set global monitors to listen for vulnerabilities
+                to your most important people and information.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud white"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title white">Monitor branches</h4>
+              <p class="white">Set perimeters around individual worksites to listen for threats.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check white"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title white">Target new clients</h4>
+              <p class="white">Our partners use <%= appdata.product %> to find and reach
+                potential customers to expand their portfolios.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <section class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <h3 class="section-title">Maximize digital security</h3>
+            <h5 class="section-desc"><%= appdata.product %>’s advanced search and
+              monitor functions ensure that your digital presence is protected from any attack.
+            </h5>
+            <ul class="text-left">
+              <li>
+                Protect against phishing and identity-based scams
+              </li>
+              <li>
+                Monitor for impersonations and malicious content that could affect executives
+              </li>
+              <li>
+                Prevent exploitation of new vulnerabilities
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+            <img src="/img/home/industry-fs-1.jpg" alt="">
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-12 pull-right">
+            <h3 class="section-title">Protect individual branches</h3>
+            <h5 class="section-desc"><%= appdata.product %> can hone in on at-risk locations
+              and sort through local data to find potential threats before they are executed.
+            </h5>
+            <ul class="text-left">
+              <li>
+                Sort information by sentiment to identify malicious intentions
+              </li>
+              <li>
+                Pinpoint potential privacy breaches
+              </li>
+              <li>
+                Stream real time information from multiple locations
+              </li>
+            </ul>
+           </div>
+          <div class="col-md-6 col-sm-12 pull-left hidden-xs">
+            <img src="/img/home/industry-fs-2.jpg" alt="" class="pull-right">
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section">
+       <div class="container">
+
+         <div class="row">
+           <div class="col-lg-5 col-md-6 col-sm-12">
+             <h3 class="section-title">Drive growth</h3>
+             <h5 class="section-desc"><%= appdata.product %>’s location-based platform
+               can help target local markets to expand any company’s client base.
+             </h5>
+             <ul class="text-left">
+               <li>
+                 Find potential markets with keyword search functions
+               </li>
+               <li>
+                 Monitor target areas with location-based searches to inform marketing campaigns
+               </li>
+               <li>
+                 Support customer success with targeted, real time insights
+               </li>
+             </ul>
+           </div>
+           <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+             <img src="/img/home/industry-fs-3.jpg" alt="">
+            </div>
+         </div>
+
+       </div>
+     </section>
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

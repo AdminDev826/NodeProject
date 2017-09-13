@@ -1,0 +1,62 @@
+<!-- Modal -->
+<div class="modal fade modal-primary" id="contactFormModal" aria-hidden="false" aria-labelledby="contactFormModalLabel"
+role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <form class="modal-content frm-contact" method="POST" id="contact_form">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">×</span>
+        </button>
+        <h4 class="modal-title" id="contactFormModalLabel">Contact</h4>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-xs-12 col-xl-12 form-group">
+              <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-xl-12 form-group">
+              <input type="text" class="form-control" name="email" id="email" placeholder="Email">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-xl-12 form-group">
+              <input type="text" class="form-control" name="phone" id="phone" placeholder="Phone">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-xl-12 form-group">
+              <textarea class="form-control" name="message" id="message" placeholder="Message" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Close</button>
+        <button type="submit" class="btn btn-primary waves-effect btn-send">Send</button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="messageTrigger" 
+  aria-live="polite" 
+  data-plugin="toastr"
+  data-message="Thank you for contacting the <%= appdata.product %> Team. You should receive an email response shortly."
+  data-container-id="toast-bottom-right" 
+  data-position-class="toast-bottom-right"
+  data-icon-class="toast-just-text toast-warning" 
+  role="alert">
+</div>
+
+<div class="modal fade modal-fill-in" id="spinnerModal" aria-hidden="false" aria-labelledby="spinnerModalFillIn"
+role="dialog" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-body">
+          <div class="vertical-align text-xs-center" id="spinner_container">
+              <div class="loader vertical-align-middle loader-ellipsis"></div>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>

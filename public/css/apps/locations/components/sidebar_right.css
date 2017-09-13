@@ -1,0 +1,49 @@
+.sidebar-right {
+  margin: 15px;
+}
+
+.sidebar-right .header {
+  display: flex;
+}
+
+.sidebar-right .header i {
+  font-size: 22px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.sidebar-right .header i:hover {
+  cursor: pointer;
+  color: #6c95f5;
+}
+
+.container-filters .content .container-filter-dictionaries {
+  display: flex;
+}
+
+.container-filters .content .container-filter-dictionaries .btn-load-dictionaries {
+  position: absolute;
+  right: 10px;
+  color: #2d75e0;
+  cursor: pointer;
+}
+
+.container-filters .content .container-filter-saved-filters {
+  display: flex;
+}
+
+.container-filters .content .container-filter-saved-filters .btn-load-filters {
+  position: absolute;
+  right: 10px;
+  color: #2d75e0;
+  cursor: pointer;
+}
+
+.container-filters .content .container-threats #icon-threats-anger {
+  color: crimson;
+}
+
+.container-filters .content .container-threats #icon-threats-love {
+  color: darkorchid;
+}

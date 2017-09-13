@@ -1,0 +1,18 @@
+.inline-row a {
+  display: none;
+}
+
+.inline-row h4, .inline-row h5, .inline-row p {
+  display: inline;
+}
+
+.inline-row:hover a {
+  display: inline;
+  cursor: pointer;
+}
+
+.inline-row:hover p, .inline-row:hover h4, .inline-row:hover h5 {
+  text-decoration: underline;
+  color: blue;
+  cursor: pointer;
+}

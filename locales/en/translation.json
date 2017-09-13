@@ -1,0 +1,52 @@
+{
+    "lang":     "English",
+    "hello":    "Hello",
+
+    "dashboard": {
+        "account": {
+            "name":                 "Name",
+            "email":                "Email",
+            "password":             "Password",
+            "signin":               "Login",
+            "signup":               "Sign Up",
+            "send":                 "Send",
+            "reset":                "Reset",
+            "remember_me" :         "Remember me",
+            "forgot_password":      "Forgot Password",
+            "forgot_your_password": "Forgot Your Password?",
+            "forgot_description":   "We've sent an email to reset your password ",
+            "input_your_email":     "Enter email to reset your password",
+            "your_email":           "Your Email",
+            "reset_your_password":  "Reset Your Password",
+            "no_account":           "No account",
+            "login_title":    "Monitor Digital Media",
+            "login_heading":  "The most powerful and comprehensive Digital Risk Monitoring platform for your organization",
+            "new_password":         "New Password",
+            "retype_password":      "Retype Password",
+            "have_an_account":      "Have account already? ",
+            "login_description":    "Sign in to your account",
+            "create_description":   "Create your account",
+            "agreement":            "By clicking Sign Up, you agree to our ",
+            "reset_description":    "Reset your password",
+            "email_alreay_in_use":  "Email is already in use",
+            "email_is_valid":       "Email is valid",
+            "password_not_matched": "Passwords not matching"
+        },
+
+        "home": {
+            "locations" :           "locations",
+            "people":               "people",
+            "keywords_social":      "keywords(social)",
+            "keywords_blogs":       "keywords(blogs/forums)",
+            "compare":              "compare",
+            "streamer":             "streamer",
+            "darkweb":              "darkweb",
+            "keywords_news":        "keywords(news)",
+            "account_impersonation":"account impersonation",
+            "learn_more":           "Learn more",
+            "addon_services":       "Addon services"
+
+        }
+    }
+
+}

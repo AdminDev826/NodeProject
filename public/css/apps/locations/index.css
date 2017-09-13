@@ -1,0 +1,163 @@
+.container-fluid {
+  background: white;
+  padding: 0px;
+}
+
+.container-fluid .col-lg-2 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-3 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-6 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-8 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-9 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-10 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container-fluid .col-lg-12 {
+  padding: 0px;
+  margin: 0px;
+}
+
+.container .header {
+  display: flex;
+}
+
+.container .header .analisis {
+  margin-top: 15px;
+  margin-left: 15px;
+}
+
+.container .header .analisis button {
+  margin-right: 10px;
+}
+
+.container .header .analisis .bullying {
+  background: rgba(138, 183, 234, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .analisis .violence {
+  background: rgba(119, 142, 223, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .analisis .pll {
+  background: rgba(119, 223, 163, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .analisis .fraud {
+  background: rgba(202, 228, 124, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .analisis .sexting {
+  background: rgba(220, 117, 205, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .analisis .racism {
+  background: rgba(166, 117, 221, 0.7);
+  color: #FFFFFF;
+}
+
+.container .header .tool-buttons {
+  margin-top: 15px;
+  margin-right: 15px;
+  position: absolute;
+  right: 0px;
+}
+
+.container .header .tool-buttons button {
+  margin-left: 10px;
+  font-size: 20px;
+  background: #FFFFFF;
+}
+
+.container .header .tool-buttons button .icon-close {
+  display: none;
+}
+
+.container .header .tool-buttons .container-btn-draw-tools {
+  position: absolute;
+  top: 50px;
+  display: none;
+}
+
+.container .header .tool-buttons .container-btn-draw-tools button {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.container .header .tool-buttons .container-btn-draw-tools button:hover {
+  background: #64beff;
+  color: #ffffff;
+}
+
+.container .sidebar-left-toggler {
+  width: 20px;
+  height: 60px;
+  font-size: 26px;
+  position: absolute;
+  top: 110px;
+  left: 0px;
+  padding: 0px;
+}
+
+.container .sidebar-left-toggler i {
+  margin: 0px;
+  display: inline;
+}
+
+.container .footer {
+  display: flex;
+  position: absolute;
+  left: 60px;
+  right: 60px;
+  bottom: 30px;
+  z-index: 1;
+}
+
+.container .footer #dataSliderId {
+  width: 100%;
+}
+
+.container .footer #dataSliderId .slider-selection {
+  background: cornflowerblue;
+}
+
+.container .footer #dataSliderId .slider-track {
+  opacity: 0.7;
+}
+
+.container-sidebar-left {
+  display: none;
+}
+
+.container-sidebar-right {
+  display: none;
+}
+
+#messageTrigger {
+  display: none;
+}

@@ -1,0 +1,71 @@
+.page-grid-view {
+  display: none;
+  margin: 10px;
+}
+
+.page-grid-view .post-item {
+  display: flex;
+  width: 30%;
+  padding: 10px;
+}
+
+.page-grid-view .post-item .post-avatar {
+  margin: 5px;
+}
+
+.page-grid-view .post-item .post-avatar img {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 2px;
+  border-style: solid;
+  border-color: #7db7ff;
+}
+
+.page-grid-view .post-item .post-description .post-description-header {
+  display: flex;
+  margin: 5px;
+}
+
+.page-grid-view .post-item .post-description .post-description-header .tag {
+  margin-top: 3px;
+  font-size: 14px;
+  color: #a2a0a0;
+  padding: 0px;
+}
+
+.page-grid-view .post-item .post-description .post-description-header .time {
+  margin-left: 20px;
+  font-size: 12px;
+  color: #a2a0a0;
+}
+
+.page-grid-view .post-item .post-description .post-description-body {
+  margin: 5px;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .location {
+  font-size: 12px;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .description {
+  font-size: 16px;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .video {
+  width: 270px;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .social-button-container .icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .social-button-container .icon:hover {
+  color: #6c95f5;
+}
+
+.page-grid-view .post-item .post-description .post-description-body .social-button-container .icon.md-mail-reply {
+  transform: scaleX(-1);
+}

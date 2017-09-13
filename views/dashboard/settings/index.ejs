@@ -1,0 +1,55 @@
+<% include ../../html/html_begin %>
+    <% include ../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+
+        <link rel="stylesheet" href="/assets/vendor/animsition/animsition.css">
+        <link rel="stylesheet" href="/assets/examples/css/pages/profile.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/account/account.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/account/security.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/account/team_settings.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/team/team_members.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/team/groups.css">
+        <link rel="stylesheet" href="/css/dashboard/settings/plan/index.css">
+    <% include ../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../components/navbar %>
+        <% include ../../components/site_menubar %>
+        <% include ../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ./component/sidebar.ejs %>
+
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+
+                            <% if (active_menu == 'account') { %>
+                                <% include ./account/index %>
+                            <% } else if (active_menu == 'team') { %>
+                                <% include ./team/index %>
+                            <% } else if (active_menu == 'plan') { %>
+                                <% include ./plan/index %>
+                            <% } %>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page -->
+    <% include ../../html/body_end %>
+
+    <script src = "/lib/jstz.min.js"></script>
+    <script src = "/js/dashboard/settings/index.js"></script>
+    <script src = "/js/dashboard/settings/account/index.js"></script>
+    <script src = "/js/dashboard/settings/account/account.js"></script>
+    <script src = "/js/dashboard/settings/account/security.js"></script>
+    <script src = "/js/dashboard/settings/team/index.js"></script>
+    <script src = "/js/dashboard/settings/team/team_members.js"></script>
+    <script src = "/js/dashboard/settings/team/groups.js"></script>
+    <script src = "/js/dashboard/settings/plan/index.js"></script>
+
+<% include ../../html/html_end %>

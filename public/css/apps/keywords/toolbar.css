@@ -1,0 +1,15 @@
+.toolbar {
+  background-color: #0c84e4;
+  text-align: center;
+}
+
+.toolbar .toolbar-container-tools {
+  font-size: 24px;
+  color: #fff;
+}
+
+.toolbar .toolbar-container-tools i {
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}

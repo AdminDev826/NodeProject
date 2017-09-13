@@ -1,0 +1,6 @@
+#gitignore for Welink
+
+#node_modules
+node_modules/
+#env
+.env

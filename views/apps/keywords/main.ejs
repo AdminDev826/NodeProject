@@ -1,0 +1,54 @@
+<% include ../../html/html_begin %>
+<% include ../../html/head_begin %>
+    <meta name="description" content="bootstrap admin template">
+    <title>Keywords</title>
+    <link rel = "stylesheet" href = "/css/apps/components/navbar.css">
+    <link rel = "stylesheet" href = "/css/apps/keywords/main.css">
+    <link rel = "stylesheet" href = "/css/apps/keywords/list-view.css">
+    <link rel = "stylesheet" href = "/css/apps/keywords/toolbar.css">
+<% include ../../html/head_end %>
+
+<% include ../../html/body_begin %>
+    <% include ../components/navbar %>
+    <% include ./toolbar %>
+    <% include ../components/site-menubar %>
+    <!-- Page -->
+    <div class="page">
+        <div class="page-content container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-xl-8 col-md-8 posts-container">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <% include ./list-view %>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Page -->
+    <!-- Modals -->
+    <% include ./save-monitor %>
+
+    <input type="hidden" id="mKeywords" value="<%= locals.keywords %>">
+    <div id="messageTrigger" 
+        aria-live="polite" 
+        data-plugin="toastr"
+        data-message="Warning"
+        data-container-id="toast-bottom-right" 
+        data-position-class="toast-bottom-right"
+        data-icon-class="toast-just-text toast-warning" 
+        role="alert">
+    </div>
+<% include ../../html/body_end %>
+
+<script src="/js/apps/utils/global.js"></script>
+<script src="/js/apps/utils/processData.js"></script>
+<script src="/js/apps/utils/instagram.js"></script>
+<script src="/js/apps/utils/youtube.js"></script>
+<script src="/js/apps/utils/vk.js"></script>
+<script src="/js/apps/keywords/toolbar.js"></script>
+<script src="/js/apps/keywords/save-monitor.js"></script>
+<script src="/js/apps/keywords/main.js"></script>
+
+<% include ../../html/html_end %>

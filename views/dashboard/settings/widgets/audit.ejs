@@ -1,0 +1,163 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template">
+        <title>Settings</title>
+        <link rel="stylesheet" href="/css/dashboard/settings/widgets/audit.css">
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+            <div class="page-main">
+                <div class="page-content">
+                    <div class="panel">
+                        <div class="panel-body">
+                            <div class="row m-b-20">
+                                <label class="label-general-properties m-b-10">General Properties</label>
+                                <table class="general-properties table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td class="w-150 p-10 text-center">name</td>
+                                            <td class="w-400 p-10 text-center">value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="p-10">backgroundColor</td> 
+                                            <td>
+                                                <input class="form-control property-backgroundColor" type="text" class="form-control" value="#FFFFFF" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">foregroundColor</td>
+                                            <td>
+                                                <input class="form-control property-foregroundColor" type="text" class="form-control" value="#757575" />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">fontSize</td>
+                                            <td>
+                                                <select class="form-control property-fontSize">
+                                                    <option value="6px">6</option>
+                                                    <option value="8px">8</option>
+                                                    <option value="10px">10</option>
+                                                    <option value="11px">11</option>
+                                                    <option value="12px">12</option>
+                                                    <option value="14px" selected>14</option>
+                                                    <option value="18px">18</option>
+                                                    <option value="24px">24</option>
+                                                    <option value="30px">30</option>
+                                                    <option value="36px">36</option>
+                                                </select>
+                                            </td
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">fontFace</td>
+                                            <td>
+                                                <select class="form-control property-fontFace">
+                                                    <option value="cursive">Cursive</option>
+                                                    <option value="fantasy">Fantasy</option>
+                                                    <option value="monospace">Monospace</option>
+                                                    <option value="sans-serif" selected>Sans-serif</option>
+                                                    <option value="serif">Serif</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row m-b-20">
+                                <label class="label-general-properties m-b-10">Advanced Properties</label>
+                                <table class="advanced-properties table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <td class="w-150 p-10 text-center">name</td>
+                                            <td class="w-400 p-10 text-center">value</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="p-10">Title</td>
+                                            <td><input type="text" class="form-control property-title"></td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">showFilterBar</td>
+                                            <td>
+                                                <select class="form-control property-showFilterBar">
+                                                    <option value="true">True</option>
+                                                    <option value="false">False</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">showTitleBar</td>
+                                            <td>
+                                                <select class="form-control property-showTitleBar">
+                                                    <option value="true">True</option>
+                                                    <option value="false">False</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">showToolbar</td>
+                                            <td>
+                                                <select class="form-control property-showToolbar">
+                                                    <option value="true">True</option>
+                                                    <option value="false">False</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="p-10">showFooter</td>
+                                            <td>
+                                                <select class="form-control property-showFooter">
+                                                    <option value="true">True</option>
+                                                    <option value="false" selected>False</option>
+                                                </select>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row m-b-20">
+                                Preview
+                                <div class='widget-preview'>
+                                    <audit class="widget" 
+                                        plugin="AuditTable"
+                                        backgroundColor="#FFFFFF"
+                                        foregroundColor="#757575"
+                                        fontSize="14px"
+                                        fontFace="Sans-serif"
+                                        title="Audit"
+                                        showTitleBar="false"
+                                        showFooter="false"
+                                        hash="">
+                                    </audit>
+                                </div>
+                            </div>
+                            <div class="row m-b-20">
+                                <button type="button" 
+                                        class="btn btn-primary clearfix m-b-10 generate-code" 
+                                        data-toggle="tooltip" 
+                                        data-placement="right" 
+                                        data-original-title="Copy to clipboard!">
+                                    Copy code
+                                </button>
+                                <textarea class="form-control usage" rows="10"></textarea>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page-->
+    <% include ../../../html/body_end %>
+
+    <script src = "/js/dashboard/settings/widgets/audit.js"></script>
+    <script src = "/lib/widgets/audit-widget/audit-widget.js"></script>
+    
+<% include ../../../html/html_end %>

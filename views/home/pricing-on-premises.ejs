@@ -1,0 +1,156 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="On-premises Pricing">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>On-premises Pricing</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+  <div class="site-body">
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/pricing-on-premise.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Choose The Right Plan For You </h1>
+          <h3 class="white"><%= appdata.product %> provides flexible and transparent plans
+            for your on-premise installations.</h3>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Pricing Table -->
+    <section class="section bg-grey-300">
+      <div class="container">
+        <div class="pricing-table">
+
+          <div class="pricing-column-four">
+            <div class="pricing-header margin-0 padding-30 padding-bottom-60 bg-light-blue-300">
+              <div class="pricing-price">
+                <span class="pricing-currency white">$</span>
+                <span class="pricing-amount white">&nbsp;60,000</span>
+                <br/><span class="pricing-period">yearly</span>
+              </div>
+              <div class="pricing-title white">On-prem <br/>Basic</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <strong>5</strong> Users</li>
+              <li>
+                <strong>500</strong> live searches /mo<br /><strong></strong> <strong>6000</strong> live searches /yr</li>
+              <li>
+                <strong>250,000</strong> processing /mo<br /><strong></strong> <strong>3 Million</strong> processing /yr</li>
+              <li>
+                <strong>Unlimited</strong> storage /mo<br /><strong></strong> <strong>Unlimited</strong> storage /yr</li>
+              <li>
+                <strong>No</strong> <br />API access</li>
+            </ul>
+            <div>
+              <a href="#" class="btn btn-primary margin-vertical-15" data-target="#contactFormModal" data-toggle="modal">Request Demo</a>
+            </div>
+          </div>
+
+          <div class="pricing-column-four featured">
+            <div class="pricing-header margin-0 padding-30 padding-bottom-60 bg-green-300">
+              <div class="pricing-price">
+                <span class="pricing-currency white">$</span>
+                <span class="pricing-amount white">&nbsp;90,000</span>
+                <br/><span class="pricing-period">yearly</span>
+              </div>
+              <div class="pricing-title white">On-Prem <br/>Premium</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <strong>10</strong> Users</li>
+              <li>
+                <strong>1000</strong> live searches /mo<br /><strong></strong> <strong>12000</strong> live searches /yr</li>
+              <li>
+                <strong>500,000</strong> processing /mo<br /><strong></strong> <strong>6 Million</strong> processing /yr</li>
+              <li>
+                <strong>Unlimited</strong> storage /mo<br /><strong></strong> <strong>Unlimited</strong> storage /yr</li>
+              <li>
+                <strong>Yes</strong> <br />API access</li>
+            </ul>
+            <div>
+              <a href="#" class="btn btn-primary margin-vertical-15" data-target="#contactFormModal" data-toggle="modal">Request Demo</a>
+            </div>
+          </div>
+
+          <div class="pricing-column-four">
+            <div class="pricing-header margin-0 padding-30 padding-bottom-60 bg-amber-300">
+              <div class="pricing-price">
+                <span class="pricing-currency white">$</span>
+                <span class="pricing-amount white">120,000</span>
+                <br/><span class="pricing-period">yearly</span>
+              </div>
+              <div class="pricing-title white">On-Prem <br/>Pro</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <strong>25</strong> Users</li>
+              <li>
+                <strong>1500</strong> live searches /mo<br /><strong></strong> <strong>18000</strong> live searches /yr</li>
+              <li>
+                <strong>1 Million</strong> processing /mo<br /><strong></strong> <strong>12 Million</strong> processing /yr</li>
+              <li>
+                <strong>Unlimited</strong> storage /mo<br /><strong></strong> <strong>Unlimited</strong> storage /yr</li>
+              <li>
+                <strong>Yes</strong> <br />API access</li>
+            </ul>
+            <div>
+              <a href="#" class="btn btn-primary margin-vertical-15" data-target="#contactFormModal" data-toggle="modal">Request Demo</a>
+            </div>
+          </div>
+
+          <div class="pricing-column-four">
+            <div class="pricing-header margin-0 padding-30 padding-bottom-60 bg-cyan-300">
+              <div class="pricing-price">
+                <span class="pricing-currency cyan-300">$</span>
+                <span class="pricing-amount white">Custom</span>
+                <br/><span class="pricing-period cyan-300">yearly</span>
+              </div>
+              <div class="pricing-title white">On-Prem <br/>Enterprise</div>
+            </div>
+            <ul class="pricing-features">
+              <li>
+                <strong>Custom</strong> Users</li>
+              <li>
+                <strong>Custom</strong> <br />live searches</li>
+              <li>
+                <strong>Custom</strong> <br />processing</li>
+              <li>
+                <strong>Unlimited</strong> <br />storage</li>
+              <li>
+                <strong>Yes</strong> <br />API access</li>
+            </ul>
+            <div>
+              <a href="#" class="btn btn-primary margin-vertical-15">Contact Us</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="text-center">
+          <br />Looking for Cloud plans? Check our Cloud plans and pricing <a href="/pricing/cloud">here</a>.
+        </div>
+
+      </div>
+    </section>
+    <!-- End Pricing-table -->
+
+
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

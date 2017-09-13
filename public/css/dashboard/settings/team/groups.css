@@ -1,0 +1,11 @@
+.groups-group-item-button-container {
+  display: -webkit-box;
+}
+
+.groups-group-item-btn-edit:hover {
+  cursor: pointer;
+}
+
+.groups-group-item-btn-delete:hover {
+  cursor: pointer;
+}

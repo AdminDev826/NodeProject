@@ -1,0 +1,119 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Public Safety Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Public Safety Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+  <div class="site-body">
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/solutions-public-safety.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Proactive public protection</h1>
+          <p class="section-desc white"><%= appdata.product %> is your eyes and ears on the web to
+            watch for and stop physical threats.</p>
+          <p>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center bg-grey-300">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">Why <%= appdata.product %>?</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Physical threats against public safety are a
+            constant vulnerability to any large organization, but can be
+            prevented with vigilant monitoring and proactive response. Many of
+            these threats are planned or discussed online before they are
+            executed, leaving a window of opening to warn security
+            officials and intervene.
+          </p>
+          <p class="section-desc text-left">
+            <%= appdata.product %> monitors multiple online channels for mentions of events and
+            locations and assesses the threat level of each post, providing
+            active warnings to prevent tragedy.
+          </p>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-grey-100">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">How it works</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Digital channels play a huge role in
+            planning and executing physical threats. <%= appdata.product %> monitors these
+            channels for mentions of locations and officials, warns of potential
+            threats before they happen, and supports intelligence and response
+            in the event of a disaster.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-deep-purple-200">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">On-site threat defense</h4>
+              <p class="grey-900">Build a perimeter around a location to monitor all data being
+                shared online and assess threat risk.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Global security monitoring</h4>
+              <p class="grey-900">Use keyword monitoring to view threats coming form anywhere
+                in the world to find and stop criminal activity.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Personalized protection</h4>
+              <p class="grey-900">Track mentions of officials and high profile event attendees
+                to calculate the potential for a targeted attack.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

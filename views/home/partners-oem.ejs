@@ -1,0 +1,99 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="OEM Partners">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>OEM Partners</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/partners-oem.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>OEM Partners</h1>
+          <p class="section-desc white"><%= appdata.product %> offers customizable software
+            and white labeling to deliver versatile solutions for any use case.
+          </p>
+          <p>
+            <a href="#" class="btn btn-lg btn-primary margin-bottom-20" data-target="#applyModal" data-toggle="modal">Apply</a>
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center bg-grey-300">
+      <div class="container container-fluid">
+        <div class="col-sm-12">
+          <h3 class="section-title">Why <%= appdata.product %>?</h3>
+        </div>
+      </div>
+    </section>
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center section-primary">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Diversified toolkit</h3>
+              <p class="section-desc"><%= appdata.product %>’s tools are designed to cover
+                all angles of the 'outside the perimeter' digital risk and security landscape.
+                With multiple search methods, investigative tools, and automatic data analysis,
+                <%= appdata.product %> can answer any digital security need.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Tailored logic</h3>
+              <p class="section-desc"><%= appdata.product %>’s search functions can be
+                customized extensively to ensure that results are relevant and highly
+                targeted. Reduce noise in online data and build a unique, high-performance
+                monitor for every client.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Whitelabel Offerings</h3>
+              <p class="section-desc"><%= appdata.product %>’s platform can be rebranded
+                and integrated with any size of operation, with data plans that are
+                tailored to every organization’s needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+     <!-- Feature -->
+     <section class="section section-feature section-small text-center">
+       <div class="container container-fluid">
+         <h3 class="section-title">Interested in becoming an OEM partner?</h3>
+
+         <p class="section-desc">Click below to find out if <%= appdata.product %> could be right for you</p>
+         <button type="button" class="btn btn-primary margin-bottom-20">Apply</button>
+
+       </div>
+     </section>
+     <!-- End Feature -->
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+
+<% include ../html/body_end %>
+<% include ../html/html_end %>

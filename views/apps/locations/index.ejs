@@ -1,0 +1,66 @@
+<% include ../../html/html_begin %>
+<% include ../../html/head_begin %>
+    <meta name="description" content="bootstrap admin template">
+    <title>Dashboard</title>
+    <link rel = "stylesheet" href = "/css/apps/locations/components/navbar_top.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/toolbar.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/site_menubar.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/sidebar_left.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/sidebar_right.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/map-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/list-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/grid-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/leaderboard-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/analytics-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/trends-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/custom-view.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/components/save-monitor.css">
+    <link rel = "stylesheet" href = "/css/apps/locations/index.css">
+<% include ../../html/head_end %>
+
+<% include ../../html/body_begin %>
+    <% include /components/navbar_top %>
+    <% include /components/toolbar %>
+    <% include /components/site_menubar %>
+    <!-- Page -->
+    <div class="page">
+        <div class="page-content container-fluid">
+                <div class="col-lg-3 container-sidebar-left">
+                    <% include /components/sidebar_left.ejs %> 
+                </div>
+                <div class="col-lg-12 container-page-body">
+                    <% include /components/map-view.ejs %>
+                    <% include /components/list-view.ejs %>
+                    <% include /components/grid-view.ejs %>
+                </div>
+                <div class="col-lg-3 container-sidebar-right">
+                    <% include /components/sidebar_right.ejs %>
+                </div>
+        </div>
+    </div>
+    <div id="messageTrigger1" 
+        aria-live="polite" 
+        data-plugin="toastr"
+        data-message="Area of the shape cannot be greater than 78.5 square kilometres."
+        data-container-id="toast-bottom-right" 
+        data-position-class="toast-bottom-right"
+        data-icon-class="toast-just-text toast-warning" 
+        role="alert">
+    </div>
+    <!-- Modals -->
+    <% include /components/save-monitor.ejs %>
+    <!-- End Page -->
+<% include ../../html/body_end %>
+
+<script  async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAq1Aff70ignLcGl37bBM98UCMlu0toi0o&libraries=drawing,places,geometry&callback=initGoogleMap" type="text/javascript"></script>
+<script src="/js/apps/locations/index.js"></script>
+<script src="/js/apps/locations/components/navbar_top.js"></script>
+<script src="/js/apps/locations/components/sidebar_left.js"></script>
+<script src="/js/apps/locations/components/save-monitor.js"></script>
+<script src="/js/apps/locations/components/twitter.js"></script>
+<script src="/js/apps/locations/components/instagram.js"></script>
+<script src="/js/apps/locations/components/facebook.js"></script>
+<script src="/js/apps/locations/components/youtube.js"></script>
+<script src="/js/apps/locations/components/vk.js"></script>
+<script src="/js/apps/locations/components/px500.js"></script>
+<% include ../../html/html_end %>

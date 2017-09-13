@@ -1,0 +1,93 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="WeLink">
+  <link rel="stylesheet" href="/assets/vendor/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="/css/pages/contact.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Contact</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <section class="section section-gmap section-full">
+      <div class="gmap" id="gmap"></div>
+    </section>
+    <!-- Contact -->
+    <section class="section section-contact section-small">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 wow slideInLeft">
+            <h3>Send Us Message</h3>
+            <form method="POST" id="contactForm">
+              <div class="form-group">
+                <label for="inputContactName" class="sr-only">Name</label>
+                <input type="text" class="form-control" id="name" name="name"
+                placeholder="Name">
+              </div>
+              <div class="form-group">
+                <label for="inputContactEmail" class="sr-only">Email</label>
+                <input class="form-control" id="email" name="email" type="email"
+                placeholder="Email">
+              </div>
+              <div class="form-group">
+                <label for="inputPhone" class="sr-only">Phone</label>
+                <input class="form-control" id="phone" name="phone" type="text"
+                placeholder="Phone">
+              </div>
+              <div class="clearfix"></div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" id="message" rows="4" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <input type="hidden" id="inputSave" name="save" value="contact">
+                <button type="submit" class="btn btn-primary wow bounceIn btn-send">Send message</button>
+              </div>
+            </form>
+          </div>
+          <div class="col-md-5 col-md-offset-1">
+            <div class="well well-lg well-primary wow slideInRight">
+              <h3>About Us</h3>
+              <p class="section-desc">
+                <%= appdata.product %> is the most comprehensive platform for 'Outside the perimeter' security for organizations to manage digital risk.
+              </p>
+              <a href="/" class="btn btn-primary btn-inverse btn-outline" type="button">Learn More</a>
+            </div>
+
+            <div class="well well-lg wow slideInRight">
+              <h3>Contact Information</h3>
+              <address class="section-desc">
+                <br> +1 650 843 9948
+                <br> <%= appdata.contactEmail %>
+                <br>
+              </address>
+
+              <!--
+              <div class="input-group">
+                <input type="text" class="form-control" placeholder="Your Email">
+                <span class="input-group-btn">
+                  <button type="button" class="btn btn-primary">Subscribe</button>
+                </span>
+              </div>
+              -->
+
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Contact -->
+  </div>
+
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/home/home1.js"></script>
+
+<% include ../html/body_end %>
+<% include ../html/html_end %>

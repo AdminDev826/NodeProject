@@ -1,0 +1,121 @@
+<!-- Navbar -->
+<nav class="site-navbar navbar navbar-fixed-top navbar-transparent navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button class="navbar-toggle hamburger hamburger-close navbar-toggle-left hided"
+      data-toggle="site-menubar" type="button">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="hamburger-bar"></span>
+      </button>
+      <div class="navbar-brand navbar-brand-center">
+        <a href="/"><img class="brand-logo" src="/img/logo/logo-small.png" alt="<%= appdata.product %> logo"></a>
+        <a href="/"><span class="brand-text"><%= appdata.product %></span></a>
+      </div>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/products/cloud"><%= appdata.product %> SaaS Cloud</a></li>
+          <li><a href="/products/on-premises"><%= appdata.product %> On-Premises</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Solutions</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/solutions/account-impersonations">Account Impersonations</a></li>
+          <li><a href="/solutions/brand-protection">Brand Protection</a></li>
+          <li><a href="/solutions/crisis-management">Crisis Management</a></li>
+          <li><a href="/solutions/customer-engagement">Customer Engagement</a></li>
+          <li><a href="/solutions/cyber-security-support">Cyber Security</a></li>
+          <li><a href="/solutions/event-security">Event Security</a></li>
+          <li><a href="/solutions/executive-protection">Executive Protection</a></li>
+          <li><a href="/solutions/public-safety">Public Safety</a></li>
+          <li><a href="/solutions/scam-protection">Scam Protection</a></li>
+          <li><a href="/solutions/security-operations-center">Security Operations Centre</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Industries</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/industry/corporate-security">Corporate Security</a></li>
+          <li><a href="/industry/emergency-response">Emergency Response</a></li>
+          <li><a href="/industry/financial-services">Financial Services</a></li>
+          <li><a href="/industry/healthcare">Healthcare</a></li>
+          <li><a href="/industry/oil-energy-utilities-providers">Oil, Energy and Utilities Providers</a></li>
+          <li><a href="/industry/political-campaigns">Political Campaigns</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Features</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/features/location-based-monitoring">Location based monitoring</a></li>
+          <li><a href="/features/trueid">TrueId</a></li>
+          <li><a href="/features/keyword-based-monitoring">Keyword based monitoring</a></li>
+          <li><a href="/features/sentiment-analysis">Sentiment Analysis</a></li>
+          <li><a href="/features/streamer">Streamer</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Pricing</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/pricing/cloud">Cloud Pricing</a></li>
+          <li><a href="/pricing/on-premises">On-Premises Pricing</a></li>
+        </ul>
+      </li>
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Partners</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/partners/mssp">MSSP</a></li>
+          <li><a href="/partners/oem">OEM</a></li>
+          <li><a href="/partners/resellers">Reseller</a></li>
+          <li><a href="/partners/technology">Technology</a></li>
+        </ul>
+      </li>
+      <!--
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Resources</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/case-studies">Case Studies</a></li>
+          <li><a href="/faq">Faq</a></li>
+        </ul>
+      </li>
+    -->
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Company</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </li>
+      <!--
+      <li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Templates</a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="/home1">Home 1</a></li>
+          <li><a href="/home2">Home 2</a></li>
+          <li><a href="/home3">Home 3</a></li>
+          <li><a href="/home4">Home 4</a></li>
+          <li><a href="/company">Company</a></li>
+          <li><a href="/service">Service</a></li>
+        </ul>
+      </li>
+    -->
+
+      <% if (logged_in) { %>
+      <li class="dropdown">
+        <a href='/dashboard'><span class="btn btn-xs btn-menu btn-primary">Dashboard</span></a>
+      </li>
+      <% } else { %>
+      <li class="login">
+        <a href="/dashboard/account/login">
+          <span class="btn btn-xs btn-menu btn-primary"><i class="wb-user margin-right-5"></i>Login</span></a>
+      </li>
+      <% } %>
+
+    </ul>
+  </div>
+</nav>
+<!-- End Navbar -->

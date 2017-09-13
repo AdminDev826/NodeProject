@@ -1,0 +1,20 @@
+.page-content.container-fluid .row .col-xs-12.col-xl-8.col-md-8 {
+  float: none;
+  margin: auto;
+}
+
+.page-content.container-fluid .row .col-xs-12.col-xl-8.col-md-8 .panel .panel-body .label-search {
+  font-size: 26px;
+  font-weight: 400;
+  color: #757575;
+}
+
+.page-content.container-fluid .row .col-xs-12.col-xl-8.col-md-8 .panel .panel-body #search-address-box {
+  border-radius: 3px;
+}
+
+.page-content.container-fluid .row .col-xs-12.col-xl-8.col-md-8 .panel .panel-body .label-comment {
+  font-size: 16px;
+  font-weight: 300;
+  color: #757575;
+}

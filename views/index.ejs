@@ -1,0 +1,299 @@
+<% include ./html/html_begin %>
+<% include ./html/head_begin %>
+  <meta name="description" content="WeLink">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Digital Risk Management for 'Outside the Perimeter' security</title>
+<% include ./html/head_end %>
+<% include ./html/body_begin %>
+<% include /home/components/navbar %>
+<% include /home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Template -->
+    <section class="section section-image-bottom section-overflow-hidden p-t-0 bg-grey-100" id="particles-js"
+    style="background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAJElEQVQoU2M8cuTIf0NDQwZCgPHr16//CSkCyY8qxBtKRAcPALlKJrcbhrJ1AAAAAElFTkSuQmCC);">
+      <div class="container home-hero-container" style="position:absolute;">
+        <div class="row home-hero">
+          <div class="col-lg-6 col-lg-offset-1 col-md-6 col-sm-12 pull-right">
+            <h2 class="section-title">Meet <%= appdata.product %>, your digital security sidekick.</h2>
+            <p class="section-desc"><%= appdata.product %> finds and stops <strong>'outside
+              the perimeter'</strong> threats to your organization and mitigates digital risk.
+            </p>
+            <p>
+              <a href="#" class="btn btn-danger btn-lg margin-vertical-15" data-target="#contactFormModal" data-toggle="modal">Schedule Demo</a>
+            </p>
+          </div>
+          <div class="col-md-5 col-sm-12 pull-left hidden-xs" style="position:relative; top:-60px;">
+            <img src="/img/logo/logo-full.gif" alt=" <%= appdata.product %> logo" class="pull-right">
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End Template -->
+
+    <!-- Content-9 -->
+    <a name="learnmore"></a>
+    <section class="section section-small text-center bg-green-300 bg_home_green">
+      <div class="container">
+        <h3 class="section-title grey-900">What does <%= appdata.product %> do?</h3>
+        <p class="white font-size-20"><%= appdata.product %> sifts through <strong>social networks</strong>, <strong>websites</strong>,
+        <strong>blogs</strong>, <strong>deep web</strong>, <strong>dark web</strong>
+        to transform threats and harmful content into actionable intelligence
+        using machine learning. <%= appdata.product %> runs multiple
+        audits of potential threats by location, keywords and user handles,
+        to uncover your vulnerabilities and mitigate risks.</p>
+      </div>
+    </section>
+
+      <section class="section section-small text-center bg-grey-100">
+        <div class="container">
+
+        <h3 class="section-title">Where is <%= appdata.product %> used?</h3>
+
+        <div class="row margin-top-30 row-eq-height">
+          <div class="col-xs-12 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-building" style="color:#00bfa5"></i>
+              <br />
+              <span class="grey-900 font-size-24">Security Operations Center (SOC)</span>
+              <div class="counter-label grey-600">Monitor 'outside the perimeter' threats and mitigate digital risk</div>
+              <a href="/solutions/security-operations-center" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin-top-30">
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-crosshairs" style="color:#00b8d4"></i>
+              <br />
+              <span class="grey-900 font-size-24">Crisis Management</span>
+              <div class="counter-label grey-600">Natural Disasters, Disease outbreaks, Industrial Accidents</div>
+              <a href="/solutions/crisis-management" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-database" style="color:#ff6d00"></i>
+              <br />
+              <span class="grey-900 font-size-24">Cyber Security</span>
+              <div class="counter-label grey-600">Malware, Phishing, Social engineering, Attack prevention</div>
+              <a href="/solutions/cyber-security-support" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-user-plus" style="color:#00c853"></i>
+              <br />
+              <span class="grey-900 font-size-24">Account Impersonations</span>
+              <div class="counter-label grey-600">Fraudulent accounts, Malicious posts, Scams and malware</div>
+              <a href="/solutions/cyber-security-support" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="row margin-top-30">
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-group" style="color:#6200ea"></i>
+              <br />
+              <span class="grey-900 font-size-24">Public Safety</span>
+              <div class="counter-label grey-600">Gang activity, Drugs control, Crime monitoring</div>
+              <a href="/solutions/public-safety" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-money" style="color:#00c853"></i>
+              <br />
+              <span class="grey-900 font-size-24">Scam protection</span>
+              <div class="counter-label grey-600">Financial scams, Malware propagation, PII leakage</div>
+              <a href="/solutions/scam-protection" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-life-saver" style="color:#ffd600"></i>
+              <br />
+              <span class="grey-900 font-size-24">Event Security</span>
+              <div class="counter-label grey-600">Physical threats, Crowd feedback, Alerts on emergecies</div>
+              <a href="/solutions/event-security" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row margin-top-30">
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-male" style="color:#c51162"></i>
+              <br />
+              <span class="grey-900 font-size-24">Executive Protection</span>
+              <div class="counter-label grey-600">Account Impersonations, Physical threats, Policy Compliance</div>
+              <a href="/solutions/executive-protection" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-comments" style="color:#ffab00"></i>
+              <br />
+              <span class="grey-900 font-size-24">Customer Engagement</span>
+              <div class="counter-label grey-600">Physical threats, Employee protection, Infrastructure protection</div>
+              <a href="/solutions/customer-engagement" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="counter p-t-20 p-b-20">
+              <i class="icon iconbox-icon fa-asterisk" style="color:#aa00ff"></i>
+              <br />
+              <span class="grey-900 font-size-24">Brand Protection</span>
+              <div class="counter-label grey-600">Malicious posts monitoring, Counterfeit goods, Competitor threats</div>
+              <a href="/solutions/brand-protection" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+    <!-- End Content-9 -->
+
+
+    <!-- Clients -->
+    <section class="section text-center">
+      <div class="container">
+        <h3 class="section-title">Who trusts <%= appdata.product %>?</h3>
+        <div class="row margin-top-70 text-center">
+          <div class="col-lg-12 text-center">
+            <img class="m-l-10 m-r-10 margin-bottom-25" alt="" src="/img/home/logo-dell.png">
+            <img class="m-l-10 m-r-10 margin-bottom-25" alt="" src="/img/home/logo-pepsico.png">
+            <img class="m-l-10 m-r-10 margin-bottom-25" alt="" src="/img/home/logo-halliburton.png">
+          </div>
+        </div>
+        <p class="section-desc"><%= appdata.product %> serves thousands of organizations and industries ranging from Fortune 5000 enterprises
+          to public sector entities. <%= appdata.product %> is the goto solution for all types of corporate security, risk management
+          and identity security professionals for managing their digital risk and 'outside the perimeter' security. Learn more about how <%= appdata.product %> can help your organization.</p>
+        <div class="row margin-top-30">
+
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-eye" style="color:#00b8d4"></i>
+              <br />
+              <span class="grey-900 font-size-24">Corporate Security Professionals</span>
+              <br/><a href="/industry/corporate-security" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-fire-extinguisher" style="color:#dd2c00"></i>
+              <br />
+              <span class="grey-900 font-size-24">Emergency Response Personnel</span>
+              <br/><a href="/industry/emergency-response" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-credit-card" style="color:#00c853"></i>
+              <br />
+              <span class="grey-900 font-size-24">Financial Services Risk</span>
+              <br/><a href="/industry/financial-services" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-ambulance" style="color:#d50000"></i>
+              <br />
+              <span class="grey-900 font-size-24">Healthcare providers</span>
+              <br/><a href="/industry/healthcare" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-cogs" style="color:#0091ea"></i>
+              <br />
+              <span class="grey-900 font-size-24">Oil, Energy and Utilities providers</span>
+              <br/><a href="/industry/oil-energy-utilities-providers" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-4 p-10">
+            <div class="grey-900 font-size-24p-t-20 p-b-20grey-900">
+              <i class="icon iconbox-icon fa-bullhorn" style="color:#aa00ff"></i>
+              <br />
+              <span class="grey-900 font-size-24">Political Campaigns</span>
+              <br/><a href="/industry/political-campaigns" class="margin-vertical-15">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- End Clients -->
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center section-primary">
+      <div class="container container-fluid">
+        <h3 class="section-title">How does <%= appdata.product %> work?</h3>
+
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon">1</i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Monitor</h3>
+              <h4>Transform data into targeted information</h4>
+              <p><%= appdata.product %> will scan bulk data from social media,
+                websites, blogs, deep web, dark web, and more to find conversations that pertain to your
+                organization.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon">2</i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Analyze</h3>
+              <h4>Translate information into intelligence</h4>
+              <p><%= appdata.product %> uses machine learning to highlight active and potential threats and digital risk
+                to your organization.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon">3</i>
+            <div class="iconbox-content">
+              <h3 class="iconbox-title">Mitigate</h3>
+              <h4>Turn intelligence into preventive action </h4>
+              <p><%= appdata.product %> helps you address digital threats, report impersonators and stop
+                malicious activity before your security, revenues and image are affected.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+
+  </div>
+
+  <% include /home/components/request_demo %>
+  <% include /home/components/request_case_study %>
+
+  <% include /home/components/footer_home %>
+  <% include /home/components/contact_form %>
+  
+  <script src="/js/global/global.js"></script>
+  <script src="/js/index.js"></script>
+  <script src="/assets/js/Plugin/particles.min.js"></script>
+
+<% include ./html/body_end %>
+<% include ./html/html_end %>

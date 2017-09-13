@@ -1,0 +1,103 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Sentiment Analysis">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Sentiment Analysis</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/features-sentiment.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Sentiment Analysis</h1>
+          <h3 class="white">Understand humans better</h3>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature bg-pink-200 text-center">
+      <div class="container container-fluid">
+        <p class="section-title white"><%= appdata.product %>’s natural language
+          processor analyzes the information from your searches to pinpoint
+          user sentiment and emotions.
+        </p>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <h3 class="section-title">Categorize</h3>
+            <p class="section-desc">Sort your keyword data into
+              positive, negative, and neutral sentiments to highlight subjects
+              that need monitoring.
+            </p>
+          </div>
+          <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+            <img src="/img/home/features-lm-2.jpg" alt="">
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-12 pull-right">
+            <h3 class="section-title">Analyze</h3>
+            <p class="section-desc">View breakdowns of global
+              sentiment and flag key threat areas to support intervention.
+            </p>
+           </div>
+          <div class="col-md-6 col-sm-12 pull-left hidden-xs">
+            <img src="/img/home/features-lm-3.jpg" alt="" class="pull-right">
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section">
+       <div class="container">
+
+         <div class="row">
+           <div class="col-lg-5 col-md-6 col-sm-12">
+             <h3 class="section-title">Flag</h3>
+             <p class="section-desc">Pinpoint posts indicating
+               potential threats on a local basis to hone your defenses against
+               physical attacks.
+             </p>
+           </div>
+           <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+             <img src="/img/home/features-km-3.jpg" alt="">
+            </div>
+         </div>
+
+       </div>
+     </section>
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

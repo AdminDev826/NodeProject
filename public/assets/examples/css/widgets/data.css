@@ -1,0 +1,98 @@
+.fixed-table-body
+{
+    overflow: auto;
+
+    height: 100%;
+}
+
+#daily-feed .name
+{
+    font-weight: 500;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    color: #616161;
+}
+
+#daily-feed .content
+{
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+#tickets .hightlight
+{
+    font-weight: 500;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    color: #616161;
+}
+
+#projects .table > tbody > tr > td,
+#projects .table > thead > tr > th
+{
+    vertical-align: middle;
+}
+
+.team-panel .avatar
+{
+    margin: 10px;
+    padding: 0;
+}
+
+.tags-panle .tag
+{
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+.input-panel .form-control
+{
+    border: 1px solid #b0bec5;
+    border-right: 0;
+    border-right: none;
+    border-left: 0;
+    border-left: none;
+    border-radius: 0;
+}
+
+.input-panel .input-panle-btn
+{
+    display: inline;
+
+    padding: 12px 15px;
+
+    border-right: 1px solid #b0bec5;
+    background-color: transparent;
+}
+
+.input-panel .input-panle-btn:hover
+{
+    color: #1e88e5;
+}
+
+.input-panel .input-panle-btn i
+{
+    margin: 12px 0;
+}
+
+.input-panel .submit
+{
+    float: right;
+
+    padding: 8px 15px 9px;
+
+    color: #1e88e5;
+    border: none;
+    border-left: 1px solid #b0bec5;
+    border-radius: 0;
+    background-color: transparent;
+}
+
+.input-panel .submit:hover
+{
+    color: #42a5f5;
+}

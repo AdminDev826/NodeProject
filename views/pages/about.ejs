@@ -1,0 +1,54 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="About <%= appdata.product %>">
+  <link rel="stylesheet" href="/css/index.css">
+  <title><%= appdata.product %></title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+  <div class="site-body">
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/about.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Our company</h1>
+          <h3 class="white">AI meets Outside the Perimeter Security</h3>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Specialization -->
+    <section class="section section-pie-progress text-center bg-cyan-300">
+      <div class="container">
+        <h3 class="section-title grey-900">Our Specialization</h3>
+
+          <p class="section-title text-left grey-900">Founded by enterprise data security
+            professionals who protected some of the largest financial services institutions, our
+            company understands the value of data and protection. That’s why we work
+            tirelessly to protect the information and security of each and every client.
+          </p>
+
+          <p class="section-title text-left grey-900">Our cutting-edge digital risk management
+            platform is the staple for security professionals everywhere. Everyday we
+            keep building better tools and expand the value <%= appdata.product %> provides.
+          </p>
+
+      </div>
+    </section>
+    <!-- End Specialization -->
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

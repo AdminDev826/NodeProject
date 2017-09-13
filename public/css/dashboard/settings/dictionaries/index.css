@@ -1,0 +1,16 @@
+.dictionary-item:hover {
+  cursor: pointer;
+  background: aliceblue;
+}
+
+.table a {
+  text-decoration: blink;
+}
+
+.show-dictionaries, .hide-dictionaries {
+  text-decoration: none;
+}
+
+.show-dictionaries:hover, .hide-dictionaries:hover {
+  text-decoration: none;
+}

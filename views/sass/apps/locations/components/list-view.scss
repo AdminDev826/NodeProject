@@ -1,0 +1,61 @@
+.page-list-view {
+    display: none;
+    margin: 10px;
+    .post-item {
+        display: flex;
+        margin: 20px;
+        .post-avatar {
+            margin: 5px;
+            img {
+                width: 40px;
+                height: 40px;
+                padding: 2px;
+                border-radius: 50%;
+                border: 2px;
+                border-style: solid;
+                border-color: #7db7ff;
+            }
+        }
+        .post-description {
+            .post-description-header {
+                display: flex;
+                margin: 5px;
+                .tag {
+                    margin-top: 3px;
+                    font-size: 14px;
+                    color: #a2a0a0;
+                    padding: 0px;
+                }
+                .time {
+                    margin-left: 20px;
+                    font-size: 12px;
+                    color: #a2a0a0;
+                }
+            }
+            .post-description-body {
+                margin: 5px;
+                .location {
+                    font-size: 12px;
+                }
+                .description {
+                    font-size: 16px;
+                }
+                .video {
+                    width: 270px;
+                }
+                .social-button-container {
+                    .icon {
+                        font-size: 20px;
+                        margin-right: 10px;
+                        &:hover {
+                            color: #6c95f5; 
+                        }
+                    }
+                    .icon.md-mail-reply {
+                        transform: scaleX(-1);
+                    }
+                }
+            }
+        }
+    }
+}

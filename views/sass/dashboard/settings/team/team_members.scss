@@ -1,0 +1,49 @@
+.member-profile-item {
+    padding:0px;
+    list-style: none;
+}
+
+.member-profile-container {
+    border: 1px;
+    border-style: solid;
+    border-color: gainsboro;
+    padding: 10px;
+}
+
+.member-profile-avatar {
+    width: 40px;
+    height: 40px;
+}
+
+.member-profile-content {
+    margin-left: 50px;
+}
+
+.member-profile-position {
+    border-bottom-width: 0px;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+.member-profile-btn-deactivate {
+    display: inline;
+    &:hover {
+        cursor: pointer
+    }
+}
+
+.member-profile-btn-activate {
+    display: inline;
+    &:hover {
+        cursor: pointer
+    }
+}
+
+.member-profile-btn-delete {
+    display: inline;
+    &:hover {
+        cursor: pointer
+    }
+}

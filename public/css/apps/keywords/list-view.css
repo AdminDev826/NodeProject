@@ -1,0 +1,101 @@
+.page-list-view .post-item {
+  margin: 10px;
+  display: flex;
+}
+
+.page-list-view .post-item:hover {
+  cursor: pointer;
+}
+
+.page-list-view .post-item .post-avatar .avatar {
+  width: 80px;
+  height: 80px;
+}
+
+.page-list-view .post-item .post-avatar .avatar img {
+  width: 80px;
+  height: 80px;
+  padding: 2px;
+  border: 2px;
+  border-style: solid;
+  border-color: #7db7ff;
+  border-radius: 50%;
+}
+
+.page-list-view .post-item .post-avatar .avatar i {
+  left: 36px;
+  bottom: -3px;
+}
+
+.page-list-view .post-item .post-avatar .line {
+  height: 30px;
+  background-color: #a2a0a0;
+  width: 1px;
+  margin-left: 40px;
+}
+
+.page-list-view .post-item .post-avatar .icon-content {
+  width: 20px;
+  height: 20px;
+  margin-left: 30px;
+  border-radius: 10px;
+}
+
+.page-list-view .post-item .post-description {
+  width: 100%;
+  margin-left: 5px;
+}
+
+.page-list-view .post-item .post-description .post-description-header {
+  color: white;
+  padding: 10px;
+}
+
+.page-list-view .post-item .post-description .post-description-header .fullname {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.page-list-view .post-item .post-description .post-description-header .tag {
+  margin-top: 5px;
+  display: none;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.page-list-view .post-item .post-description .post-description-header .time {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.page-list-view .post-item .post-description .post-description-header .time i {
+  margin-right: 5px;
+}
+
+.page-list-view .post-item .post-description .post-description-body {
+  margin-top: 5px;
+}
+
+.page-list-view .post-item .post-description .post-description-body .description {
+  color: #9e3907;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.page-list-view .post-item .post-description .post-description-body .post {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.page-list-view .post-item .post-description .post-description-body .social-button-container .icon {
+  margin-right: 10px;
+}
+
+.page-list-view .post-item .post-description .post-description-body .social-button-container .icon:hover {
+  color: #6c95f5;
+}
+
+.page-list-view .post-item .post-description .post-description-body .social-button-container .icon.md-mail-reply {
+  transform: scaleX(-1);
+}

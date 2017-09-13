@@ -1,0 +1,89 @@
+.page-list-view {
+    .post-item {
+        margin: 10px;
+        display: flex;
+        &:hover {
+            cursor: pointer;
+        }
+        .post-avatar {
+            .avatar {
+                width: 80px;
+                height: 80px;
+                img {
+                    width: 80px;
+                    height: 80px;
+                    padding: 2px;
+                    border: 2px;
+                    border-style: solid;
+                    border-color: #7db7ff;
+                    border-radius: 50%;
+                }
+                i {
+                    left: 36px;
+                    bottom: -3px;
+                }
+            }
+            .line {
+                height: 30px;
+                background-color: #a2a0a0;
+                width: 1px;
+                margin-left: 40px;
+            }
+            .icon-content {
+                width: 20px;
+                height: 20px;
+                margin-left: 30px;
+                border-radius: 10px;
+            }
+        }
+        .post-description {
+            width: 100%;
+            margin-left: 5px;
+            .post-description-header {
+                color: white;
+                padding: 10px;
+                .fullname {
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                .tag {
+                    margin-top: 5px;
+                    display: none;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+                .time {
+                    margin-top: 5px;
+                    font-size: 14px;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+            }
+            .post-description-body {
+                margin-top: 5px;
+                .description {
+                    color: #9e3907;
+                    font-size: 14px;
+                    word-break: break-all;
+                }
+                .post {
+                    max-height: 100%;
+                    max-width: 100%;
+                    object-fit: contain;
+                }
+                .social-button-container {
+                    .icon {
+                        margin-right: 10px;
+                        &:hover {
+                            color: #6c95f5; 
+                        }
+                    }
+                    .icon.md-mail-reply {
+                        transform: scaleX(-1);
+                    }
+                }
+            }    
+        }
+    }
+}

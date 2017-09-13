@@ -1,0 +1,170 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Emergency Response Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Emergency Response Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/industry-emergency-response.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>A platform that works as quickly as you do</h1>
+          <h3 class="white"><%= appdata.product %> for emergency response</h3>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center">
+      <div class="container container-fluid">
+        <p class="section-desc text-left font-size-24">With <%= appdata.product %>, the entire community
+          becomes your team on the ground. Effortlessly gather geosocial data
+          in real time to support highly informed, efficient emergency response teams.
+        </p>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-orange-200">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Scalable Support</h4>
+              <p class="grey-900">Deploy <%= appdata.product %> anywhere in the world to see the full situation unfold.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Pinpoint Critical Areas</h4>
+              <p class="grey-900">Build time stamped maps of developments documented by people on the ground.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Track Ongoing Crises</h4>
+              <p class="grey-900">Gather data in real time to deploy more prepared response teams.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <section class="section">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-5 col-md-6 col-sm-12">
+            <h3 class="section-title">Borderless emergency Aid</h3>
+            <h5 class="section-desc">Deploy <%= appdata.product %> anywhere in the world
+              to instantly target the exact location you need to monitor.
+            </h5>
+            <ul class="text-left">
+              <li>
+                Create location-based monitors to track developing situations
+                anywhere in the world
+              </li>
+              <li>
+                Gain proactive insights on affected areas with real time
+                data processing
+              </li>
+              <li>
+                Leverage language-agnostic sentiment processing
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+            <img src="/img/home/industry-dr-1.jpg" alt="">
+           </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-5 col-lg-offset-1 col-md-6 col-sm-12 pull-right">
+            <h3 class="section-title">Limitless crisis monitoring</h3>
+            <h5 class="section-desc">Let public online information
+              feed your intelligence on any issue and be the first to know about
+              essential on the ground updates.
+            </h5>
+            <ul class="text-left">
+              <li>
+                Geofence known crisis areas to monitor for updates
+              </li>
+              <li>
+                Set automated alerts to reduce response time
+              </li>
+              <li>
+                Instantly flag potential threats to public safety
+              </li>
+            </ul>
+           </div>
+          <div class="col-md-6 col-sm-12 pull-left hidden-xs">
+            <img src="/img/home/industry-dr-2.jpg" alt="" class="pull-right">
+           </div>
+         </div>
+       </div>
+     </section>
+
+     <section class="section">
+       <div class="container">
+
+         <div class="row">
+           <div class="col-lg-5 col-md-6 col-sm-12">
+             <h3 class="section-title">Priceless public safety mechanisms</h3>
+             <h5 class="section-desc">Use online data as your reporters
+               on the ground to coordinate response teams and administer better care.</h5>
+             <ul class="text-left">
+               <li>
+                 Use visualization tools to map a situation as it unfolds
+               </li>
+               <li>
+                 Track developments in real time with streamlined social data
+               </li>
+               <li>
+                 Flag users that require aid with advanced natural language processing
+               </li>
+             </ul>
+           </div>
+           <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+             <img src="/img/home/industry-dr-3.jpg" alt="">
+            </div>
+         </div>
+
+       </div>
+     </section>
+
+     <% include ../home/components/request_demo %>
+     <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

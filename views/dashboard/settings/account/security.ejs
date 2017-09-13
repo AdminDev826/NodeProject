@@ -1,0 +1,79 @@
+<div class="tab-pane" id="tab_security" role="tabpanel">
+    <div class = "panel">
+        <div class = "panel-body container-fluid">
+            <div class = "col-xs-12 col-lg-12">
+                <div class = "row separated-row">
+                    <p class = "password-label"> Password </p>
+                    <p class = "change-password"> <a href = "javascript:void(0)" data-target = "#changePasswordFormModal" data-toggle="modal">Change Password</a> </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!------------->
+ 
+<!-- Security-ChangePasswordModal -->
+<div class="modal fade modal-success" id="changePasswordFormModal" aria-hidden="false" aria-labelledby="changePasswordFormModal"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <form class="modal-content" action = "/dashboard/settings/account/changePassword" id="changePasswordForm" method= "POST">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="changePasswordFormModalLabel">Change Password</h4>
+            </div>
+            <div class="modal-body">
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                        <div class="alert alert-danger" id="password_not_matched" style="display: none;">
+                            <p class = "security_message"><%= t('dashboard.account.password_not_matched') %></a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="password" class="form-control" name="oldPassword" placeholder="Old Password" id="oldPassword" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="password" class="form-control" name="newPassword" placeholder="New Password" id="newPassword" required="true">
+                    </div>
+                </div>
+                <div class = "row">
+                    <div class="col-xs-12 col-xl-12 form-group">
+                    <input type="password" class="form-control" name="confirmPassword" placeholder="Confirm Password" id="confirmPassword" required="true">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary waves-effect">Change Password</button>
+                <button type="button" class="btn btn-default btn-pure waves-effect" data-dismiss="modal">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Security-SuccessMessagedModal -->
+<button type="button" data-target = "#successMessageModal" data-toggle="modal" id="successMessage" style="display:none"></button>
+<div class="modal fade modal-success" id="successMessageModal" aria-hidden="false" aria-labelledby="successMessageModal"
+                    role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-sm modal-center">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span>×</span>
+                </button>
+                <h4 class="modal-title" id="successMessageModalLabel">Success</h4>
+            </div>
+            <div class="modal-body">
+                <p> Your password was changed successfully. </p>
+            </div>
+            <div class="modal-footer text-xs-center">
+                <button type="button" class="btn btn-primary waves-effect" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>

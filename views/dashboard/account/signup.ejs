@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html class="no-js css-menubar" lang="en">
+
+    <% include ../../html/head_begin %>
+        <title>Signup</title>
+        <script src="/js/dashboard/account/signup.js"></script>
+        <link rel="stylesheet" href="/assets/examples/css/pages/register-v2.css">
+    <% include ../../html/head_end %>
+
+    <body class="animsition page-register-v2 layout-full page-dark">
+        <!--[if lt IE 8]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Page -->
+        <div class="page" data-animsition-in="fade-in" data-animsition-out="fade-out">
+            <div class="page-content">
+                <div class="page-brand-info">
+                    <div class="brand">
+                        <img class="brand-img" src="/img/logo.png" alt="">
+                        <h2 class="brand-text font-size-40"><%= t('dashboard.account.login_title') %></h2>
+                    </div>
+                    <p class="font-size-20"><%= t('dashboard.account.login_heading') %></p>
+                </div>
+                <div class="page-register-main">
+                    <div class="brand hidden-md-up">
+                        <img class="brand-img" src="/img/logo.png" alt="<%= appdata.product %> logo">
+                        <h3 class="brand-text font-size-40"><%= appdata.product %></h3>
+                    </div>
+
+                    <div class="text-center">
+                    <img class="brand-img" src="/img/logo.png" alt="">
+                    <h4><%= appdata.product %> - <%= t('dashboard.account.create_description') %></h4>
+                    </div>
+
+                    <div class="alert alert-danger" id="email_already_in_use_alert" style="display: block;">
+                        <p><%= t('dashboard.account.email_alreay_in_use') %></a></p>
+                    </div>
+                    <div class="alert alert-danger" id="password_not_matched" style="display: block;">
+                        <p><%= t('dashboard.account.password_not_matched') %></a></p>
+                    </div>
+
+                    <form method="post" role="form" autocomplete="off" id = "register_form">
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input type="text" class="form-control empty" id="inputName" name="name" required = "true">
+                            <label class="floating-label" for="inputName"><%= t('dashboard.account.name') %></label>
+                        </div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input type="email" class="form-control empty" id="inputEmail" name="email" required = "true">
+                            <label class="floating-label" for="inputEmail"><%= t('dashboard.account.email') %></label>
+                        </div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input type="password" class="form-control empty" id="inputPassword" name="password" required = "true">
+                            <label class="floating-label" for="inputPassword"><%= t('dashboard.account.password') %></label>
+                        </div>
+                        <div class="form-group form-material floating" data-plugin="formMaterial">
+                            <input type="password" class="form-control empty" id="inputPasswordCheck" name="passwordCheck" required = "true">
+                            <label class="floating-label" for="inputPasswordCheck"><%= t('dashboard.account.retype_password') %></label>
+                        </div>
+                        <div class="form-group clearfix">
+                            <div class="checkbox-custom checkbox-inline checkbox-primary pull-xs-left">
+                                <input type="checkbox" id="inputCheckbox" name="term" required = "true">
+                                <label for="inputCheckbox"></label>
+                            </div>
+                            <p class="m-l-35"><%= t('dashboard.account.agreement') %> <a href="#">Terms</a></p>
+                        </div>
+                        <input type="hidden" class="form-group form-material floating" id="timezone" name="timezone">
+                        <button type="submit" class="btn btn-primary btn-block" id = "btn_submit"><%= t('dashboard.account.signup') %></button>
+                    </form>
+                    <p> <%= t('dashboard.account.have_an_account') %> <a href="/dashboard/account/login"><%= t('dashboard.account.signin') %></a></p>
+                    <footer class="page-copyright">
+                        <p><%= appdata.product %> © 2017. All rights reserved.</p>
+                        <div class="social">
+                            <a class="btn btn-icon btn-round social-twitter" href="javascript:void(0)">
+                                <i class="icon bd-twitter"></i>
+                            </a>
+                            <a class="btn btn-icon btn-round social-facebook" href="javascript:void(0)">
+                                <i class="icon bd-facebook"></i>
+                            </a>
+                            <a class="btn btn-icon btn-round social-google-plus" href="javascript:void(0)">
+                                <i class="icon bd-google-plus"></i>
+                            </a>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <!-- End Page -->
+
+    <% include ../../html/body_end %>
+
+    <script>
+        (function(document, window, $) {
+            'use strict';
+            var Site = window.Site;
+            $(document).ready(function() {
+                Site.run();
+            });
+        })(document, window, jQuery);
+    </script>
+
+<% include ../../html/html_end %>

@@ -1,0 +1,81 @@
+<% include ../../../html/html_begin %>
+    <% include ../../../html/head_begin %>
+        <meta name="description" content="bootstrap admin template"> 
+        <title>Settings</title>
+        <link rel="stylesheet" href="/css/dashboard/settings/dictionaries/index.css">
+    <% include ../../../html/head_end %>
+
+    <body class="animsition page-aside-fixed page-aside-left">
+        <% include ../../../components/navbar %>
+        <% include ../../../components/site_menubar %>
+        <% include ../../../components/site_gridmenu %>
+        <!-- Page -->
+        <div class="page">
+            <% include ../component/sidebar.ejs %>
+            <div class="page-main">
+                <div class="page-content"> 
+                    <div class="panel">
+                        <div class="panel-body">
+                            <a class="btn btn-primary btn-block m-b-20" href="/dashboard/settings/dictionaries/create">
+                                Create a new dictionary
+                            </a>
+                            <h4>Dictionaries</h4>
+                            <table class="table table-account-dictionaries">
+                                <thead>
+                                    <tr>
+                                        <td class="cell-60 responsive-hide">Icon</td>
+                                        <td class="cell-200">Title</td>
+                                        <td class="cell-120">Items</td>
+                                        <td class="cell-120">Rating</td>
+                                        <td class="cell-60">Installs</td>
+                                        <td class="cell-100">Author</td>
+                                        <td class="cell-100"></td>
+                                    </tr>
+                                <thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                            <a href="#" class="show-dictionaries">
+                                <i class="fa fa-angle-double-down"></i>
+                                Show other public dictionaries
+                            </a>
+                            <a href="#" class="hide-dictionaries">
+                                <i class="fa fa-angle-double-up"></i>
+                                Hide public dictionaries
+                            </a>
+                            <h4>Other public dictionaries</h4>
+                            <div class="public-dictionaries">
+                                <form autocomplete="off" id="search_form">
+                                    <div class="input-search clearfix">
+                                        <input type="text" class="form-control search-dictionaries" placeholder="Search...">
+                                        <button type="submit" class="input-search-btn">
+                                            <i class="icon md-search"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                                
+                                <table class="table table-hover dataTable table-striped w-full" id="table-public-dictionaries">
+                                    <thead>
+                                        <tr>
+                                            <th class="w-50">Icon</th>
+                                            <th class="w-200">Title</th>
+                                            <th class="w-70">Items</th>
+                                            <th class="w-150">Rating</th> 
+                                            <th class="w-60">Installs</th>
+                                            <th class="w-100">Author</th>
+                                            <th class="w-60"></th>
+                                        </tr>
+                                    </thead>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--End Page-->
+    <% include ../../../html/body_end %>
+
+    <script src = "/js/dashboard/settings/dictionaries/index.js"></script>
+    
+<% include ../../../html/html_end %>

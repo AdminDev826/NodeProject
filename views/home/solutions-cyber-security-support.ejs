@@ -1,0 +1,111 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+  <meta name="description" content="Cyber Security Solutions by <%= appdata.product %> Digital Risk Management">
+  <link rel="stylesheet" href="/css/index.css">
+  <title>Cyber Security Solutions by <%= appdata.product %> Digital Risk Management</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+
+  <div class="site-body">
+
+    <!-- Hero -->
+    <section class="site-hero hero hero-light padding-top-80"
+    style="background-image:url(/img/home/solutions-cyber-security-support.jpg)">
+      <div class="container">
+        <div class="content">
+          <h1>Proactive Cybersecurity Support</h1>
+          <p class="section-desc white"><%= appdata.product %> watches and listens for outside the perimeter digital threats to give advance
+            warning and boost defense capabilities</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero -->
+
+    <!-- Feature -->
+    <section class="section section-feature text-center bg-grey-300">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">Why <%= appdata.product %>?</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Cyber attacks can have enormous impacts on a company’s revenues and
+            operations. From denial of service attacks to rogue software, most companies find themselves vulnerable
+            on multiple fronts.
+          </p>
+          <p class="section-desc text-left">
+            With <%= appdata.product %>, companies can monitor everything from social media to the dark web for signs
+            of an incoming or ongoing attack to give them time to prepare and defend their systems.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-grey-100">
+      <div class="container container-fluid">
+        <div class="col-sm-12 col-md-6">
+          <h3 class="section-title">How it works</h3>
+        </div>
+        <div class="col-sm-12 col-md-6">
+          <p class="section-desc text-left">Hackers and other malicious actors plan and operate through digital
+            channels. With <%= appdata.product %>’s advanced monitoring tools, these conversations and pieces of code can be identified
+            and tracked across multiple channels to provide proactive cybersecurity support.</p>
+        </div>
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <!-- Feature -->
+    <section class="section section-feature section-small text-center bg-red-200">
+      <div class="container container-fluid">
+        <div class="row feature-group">
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-mobile"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">On-site monitoring</h4>
+              <p class="grey-900">Map a listening perimeter around your worksites to monitor more
+                closely for physical threats against data centers and other physical assets.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-cloud"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Identity Protection</h4>
+              <p class="grey-900">Detect fraudulent accounts and websites to defend against privacy threats and
+                human error and track the progress of new threat types.
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-4 iconbox iconbox-left">
+            <i class="icon iconbox-icon wb-check"></i>
+            <div class="iconbox-content">
+              <h4 class="iconbox-title grey-900">Keyword Monitoring</h4>
+              <p class="grey-900">Monitor the web for vulnerabilities and specific mentions of your
+                organization to gain advance knowledge of incoming attacks.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Feature -->
+
+    <% include ../home/components/request_demo %>
+    <% include ../home/components/request_case_study %>
+
+  </div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>

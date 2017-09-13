@@ -1,0 +1,90 @@
+<% include ../html/html_begin %>
+<% include ../html/head_begin %>
+<meta name="description" content="<%= appdata.product %> Cloud">
+<link rel="stylesheet" href="/css/index.css">
+<title><%= appdata.product %> Cloud</title>
+<% include ../html/head_end %>
+<% include ../html/body_begin %>
+<% include ../home/components/navbar %>
+<% include ../home/components/menubar %>
+<div class="site-body">
+
+  <!-- Hero -->
+  <section class="site-hero hero hero-light padding-top-80" style="background-image:url(/img/home/products-cloud.jpg)">
+    <div class="container">
+      <div class="content">
+        <h1><%= appdata.product %> SaaS Cloud</h1>
+        <p class="section-desc white">Top of the line digital risk management
+           is more accessible than ever</p>
+        <p>
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+  <!-- Feature -->
+  <section class="section section-feature section-primary text-center">
+    <div class="container container-fluid">
+      <p class="section-desc white text-left font-size-24">
+
+        All the power and flexibility of <%= appdata.product %>’s
+        'outside the perimeter' digital risk managment platform,
+        with the entire infrastructure managed by the <%= appdata.product %> team.
+      </p>
+
+      <p class="section-desc white text-left font-size-24">
+        Conduct your threat scans with top of the line backend security
+        and cloud-based data processing for potent, private digital risk
+        analysis accessible from anywhere.
+      </p>
+
+      <p class="section-desc white text-left font-size-24">
+        <%= appdata.product %> SaaS Cloud is the fastest and easiest way to
+        get started with the <%= appdata.product %> digital risk managment platform.
+      </p>
+
+    </div>
+  </section>
+  <!-- End Feature -->
+
+  <section class="section section-pie-progress text-center">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-5 col-md-6 col-sm-12">
+          <h3 class="section-title">Benefits</h3>
+          <p class="section-desc">With <%= appdata.product %> Cloud, you can:</p>
+          <ul class="text-left">
+            <li>
+              Free yourself from hardware costs and maintenance
+            </li>
+            <li>
+              Trust that maintenance and upgrades are included in our quality customer service
+            </li>
+            <li>
+              Focus on what really matters: keeping your organization secure
+            </li>
+          </ul>
+        </div>
+        <div class="col-lg-offset-1 col-md-6 col-sm-12 hidden-xs">
+          <img src="/img/home/products-analytics.jpg" alt="">
+         </div>
+      </div>
+
+    </div>
+  </section>
+
+
+   <% include ../home/components/request_demo %>
+   <% include ../home/components/request_case_study %>
+
+</div>
+
+<% include ../home/components/footer_home %>
+<% include ../home/components/contact_form %>
+
+<script src="/js/global/global.js"></script>
+<script src="/js/index.js"></script>
+<% include ../html/body_end %>
+<% include ../html/html_end %>
